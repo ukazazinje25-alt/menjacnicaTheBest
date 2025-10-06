@@ -23,36 +23,36 @@
         </svg>
         <!-- Tamno sivi top navbar, sa paddingom i linkom za prigovore -->
         <nav class="navbar-top text-white py-1 bg-dark">
-          <div class="container">
-              <div class="row w-100 align-items-center flex-nowrap">
-                  <div class="col-8 d-flex align-items-center">
-                      <span class="font-weight-bold mr-2 d-none d-sm-inline">
-                          <i class="bi bi-telephone-fill mr-1"></i>Call Centar:
-                      </span>
-                      <span class="d-inline d-sm-none mr-1">
-                          <i class="bi bi-telephone-fill"></i>
-                      </span>
-                      <span class="mr-2">+381 61 1340888</span>
-                      <span class="d-none d-md-inline">info@menjacnicathebest.rs</span>
-                  </div>
-                  <div class="col-4 d-flex justify-content-end align-items-center">
-                      <select class="custom-select custom-select-sm bg-dark text-white border-0 select-lang-width">
-                          <option value="sr">SR</option>
-                          <option value="en">EN</option>
-                          <option value="de">RU</option>
-                      </select>
-                  </div>
-              </div>
-          </div>
-      </nav>
+    <div class="container">
+        <div class="row w-100 align-items-center flex-nowrap">
+            <div class="col-8 d-flex align-items-center">
+                <span class="font-weight-bold mr-2 d-none d-sm-inline">
+                    <i class="bi bi-telephone-fill mr-1"></i>Call Centar:
+                </span>
+                <span class="d-inline d-sm-none mr-1">
+                    <i class="bi bi-telephone-fill"></i>
+                </span>
+                <span class="mr-2">+381 61 1340888</span>
+                <span class="d-none d-md-inline">info@menjacnicathebest.rs</span>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <select class="custom-select custom-select-sm bg-dark text-white border-0" style="width:auto;">
+                    <option value="sr">SR</option>
+                    <option value="en">EN</option>
+                    <option value="de">RU</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</nav>
 
     
     <!--Nav bar levo logo desno linkovi-->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom-bg">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: #fff; z-index: 100;">
             <div class="container">
         <a class="navbar-brand fw-bold" href="#">
             <span class="fw-bold">
-                Menjačnica The Best
+                Menjačnica <span style="color:#e3b448;">The Best</span>
             </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,11 +90,10 @@
     <div class="hero-art"></div>
     <div class="container">
         <!-- Naslov gore -->
-        <h1 class="font-weight-bold mb-3 text-center animate-on-scroll heroH1">
-            Menjačnica
-            <span class="text-gold">The Best</span><br>
-            <small class="d-block mt-2 hero-subtitle">
-                Savremeno zakazivanje transakcija, profesionalna usluga i maksimalna sigurnost za vaše finansije
+        <h1 class="font-weight-bold mb-3 text-center animate-on-scroll">
+            Menjačnica <span style="color:#e3b448;">The Best</span><br>
+            <small class="d-block mt-2" style="font-weight:400; color:#444; font-size:1.25rem;">
+                Savremeno zakazivanje transakcija, profesionalna usluga i maksimalna sigurnost za vaše finansije.
             </small>
         </h1>
         <div class="row align-items-center">
@@ -109,7 +108,7 @@
             </div>
             <!-- Desno kalkulator -->
             <div class="col-md-6 mb-5 animate-on-scroll">
-                <div class="card shadow-sm p-4 hero-calc-card">
+                <div class="card shadow-sm p-4" style="border-radius:18px; ">
                     <div class="special-offer-animated p-3 mb-3 text-center">
                         <div class="special-offer-rate">1 EUR = 117.00 RSD</div>
                     </div>
@@ -128,7 +127,7 @@
                             <div class="col-12">
                                 <label class="font-weight-bold">Iznos i valuta:</label>
                                 <div class="input-group mb-2">
-                                    <select class="btn btn-outline-warning dropdown-toggle hero-currency-select" id="fromCurrency" required>
+                                    <select class="btn btn-outline-warning dropdown-toggle" id="fromCurrency" required style="max-width:140px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
                                         <option value="EUR">EUR</option>
                                         <option value="USD">USD</option>
                                         <option value="CHF">CHF</option>
@@ -141,7 +140,7 @@
                                 </div>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="calcOutput" placeholder="Dobijeni iznos" readonly>
-                                    <select class="btn btn-outline-warning dropdown-toggle hero-currency-select" id="toCurrencyOutput">
+                                    <select class="btn btn-outline-warning dropdown-toggle" id="toCurrencyOutput" style="max-width:140px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
                                         <option value="RSD">RSD</option>
                                         <option value="EUR">EUR</option>
                                         <option value="USD">USD</option>
@@ -164,14 +163,14 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-outline-warning btn-block hero-calc-btn">
+                        <button type="submit" class="btn btn-outline-warning btn-block" style="width:100%; color:#fff; background-color:#e3b448; border-color:#e3b448;">
                             Zakaži transakciju
                         </button>
                         <div class="mt-2 text-muted small">
                             *Kursevi su uzeti iz <a href="#kursnaLista">kursne liste</a>
                         </div>
                     </form>
-                    <div id="calcResult" class="mt-4 hero-calc-result"></div>
+                    <div id="calcResult" class="mt-4" style="font-size:1.2rem; color:#222;"></div>
                 </div>
             </div>
         </div>
@@ -195,7 +194,7 @@
             </div>
             <!-- Zadnja strana -->
             <div class="flip-back">
-              <p>Bez obzira na iznos, uspešno završavamo svaku transakciju<br> brzo i pouzdano</p>
+              <p>Bez obzira na iznos, uspešno završavamo svaku transakciju<br> brzo i pouzdano.</p>
             </div>
           </div>
         </div>
@@ -222,10 +221,10 @@
           <div class="flip-inner">
             <div class="flip-front">
               <i class="bi bi-person-badge flip-icon"></i>
-              <h3>Uplata na Tekući račun bez Limita</h3>
+              <h3>Uplata ne Tekući račun bez Limita</h3>
             </div>
             <div class="flip-back">
-              <p>Našim klijentima pružamo posebnu pažnju i ekskluzivan, diskretan pristup</p>
+              <p>Našim klijentima pružamo posebnu pažnju i ekskluzivan, diskretan pristup.</p>
             </div>
           </div>
         </div>
@@ -239,48 +238,48 @@
 
     <!-- Kursna lista-->
     <div class="container my-5 " id="kursnaLista">
-                <div class="kursna-lista-bg kursna-lista-bg-custom">
+                <div class="kursna-lista-bg"  style="position:relative; width:100%; min-height:420px;">
                
-                            <div class="row justify-content-center align-items-stretch animate-on-scroll kursna-lista-row">
+                            <div class="row justify-content-center align-items-stretch animate-on-scroll" style="position:relative; z-index:1;">
                                 <div class="col-12">
-                                    <h1 class="font-weight-bold text-center">Kursna lista</h1>
+                                    <h1 class="font-weight-bold text-center" style="color:#e3b448;">Kursna lista</h1>
                                 </div>
                                 <div class="col-lg-6 d-flex align-items-center">
-                                    <div class="kursna-lista-glass w-100 my-4 p-3 kursna-lista-glass-custom">
+                                    <div class="kursna-lista-glass w-100 my-4 p-3" style="border-radius:28px; background:rgba(255,255,255,0.18); box-shadow:0 8px 32px 0 rgba(35,35,35,0.18); backdrop-filter:blur(12px); border:1px solid rgba(227,180,72,0.18);">
                                         <div class="table-responsive">
-                                            <table class="table table-hover text-center lead fw-medium kursna-lista-table">
+                                            <table class="table table-hover text-center lead fw-medium" style="border-radius:18px; overflow:hidden; background:rgba(255,255,255,0.45);">
                                                 <thead>
-                                                    <tr class="kursna-lista-table-head">
-                                                        <th class="kursna-th-left">Valuta</th>
-                                                        <th class="kursna-th">Oznaka</th>
-                                                        <th class="kursna-th">Otkup</th>
-                                                        <th class="kursna-th-right">Prodaja</th>
+                                                    <tr style="background: linear-gradient(90deg, #222 60%, #e3b448 100%); color:#fff;">
+                                                        <th style="border-top-left-radius:18px; font-size:1.1rem;">Valuta</th>
+                                                        <th style="font-size:1.1rem;">Oznaka</th>
+                                                        <th style="font-size:1.1rem;">Otkup</th>
+                                                        <th style="border-top-right-radius:18px; font-size:1.1rem;">Prodaja</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇪🇺</span> <span class="ml-2 font-weight-bold kursna-valuta">Evro</span></td><td class="text-center kursna-oznaka">EUR</td><td class="kursna-iznos">117.00</td><td class="kursna-iznos">117.50</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇪🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;">Evro</span></td><td class="text-center" style="color:#222; font-weight:600;">EUR</td><td style="color:#222;">117.00</td><td style="color:#222;">117.50</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇺🇸</span> <span class="ml-2 font-weight-bold kursna-valuta">Američki dolar</span></td><td class="text-center kursna-oznaka">USD</td><td class="kursna-iznos">110.00</td><td class="kursna-iznos">111.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇺🇸</span> <span class="ml-2 font-weight-bold" style="color:#222;">Američki dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">USD</td><td style="color:#222;">110.00</td><td style="color:#222;">111.00</td>
                                                     </tr >
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇨🇭</span> <span class="ml-2 font-weight-bold kursna-valuta">Švajcarski franak</span></td><td class="text-center kursna-oznaka">CHF</td><td class="kursna-iznos">120.00</td><td class="kursna-iznos">121.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇨🇭</span> <span class="ml-2 font-weight-bold" style="color:#222;">Švajcarski franak</span></td><td class="text-center" style="color:#222; font-weight:600;">CHF</td><td style="color:#222;">120.00</td><td style="color:#222;">121.00</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇬🇧</span> <span class="ml-2 font-weight-bold kursna-valuta">Britanska funta</span></td><td class="text-center kursna-oznaka">GBP</td><td class="kursna-iznos">137.00</td><td class="kursna-iznos">138.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇬🇧</span> <span class="ml-2 font-weight-bold" style="color:#222;">Britanska funta</span></td><td class="text-center" style="color:#222; font-weight:600;">GBP</td><td style="color:#222;">137.00</td><td style="color:#222;">138.00</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span >🇦🇺</span> <span class="ml-2 font-weight-bold kursna-valuta">Australijski dolar</span></td><td class="text-center kursna-oznaka">AUD</td><td class="kursna-iznos">75.00</td><td class="kursna-iznos">76.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span >🇦🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;">Australijski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">AUD</td><td style="color:#222;">75.00</td><td style="color:#222;">76.00</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span">🇨🇦</span> <span class="ml-2 font-weight-bold kursna-valuta">Kanadski dolar</span></td><td class="text-center kursna-oznaka">CAD</td><td class="kursna-iznos">80.00</td><td class="kursna-iznos">81.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span">🇨🇦</span> <span class="ml-2 font-weight-bold" style="color:#222;">Kanadski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">CAD</td><td style="color:#222;">80.00</td><td style="color:#222;">81.00</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇷🇸</span> <span class="ml-2 font-weight-bold kursna-valuta">Srpski dinar</span></td><td class="text-center kursna-oznaka">RSD</td><td class="kursna-iznos">1.00</td><td class="kursna-iznos">1.00</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇷🇸</span> <span class="ml-2 font-weight-bold" style="color:#222;">Srpski dinar</span></td><td class="text-center" style="color:#222; font-weight:600;">RSD</td><td style="color:#222;">1.00</td><td style="color:#222;">1.00</td>
                                                     </tr>
-                                                    <tr class="text-left kursna-row">
-                                                        <td><span>🇷🇺</span> <span class="ml-2 font-weight-bold kursna-valuta">Ruska rublja</span></td><td class="text-center kursna-oznaka">RUB</td><td class="kursna-iznos">1.20</td><td class="kursna-iznos">1.30</td>
+                                                    <tr style="transition:background 0.2s;" class="text-left">
+                                                        <td><span>🇷🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;">Ruska rublja</span></td><td class="text-center" style="color:#222; font-weight:600;">RUB</td><td style="color:#222;">1.20</td><td style="color:#222;">1.30</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -291,38 +290,30 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 d-flex align-items-center">
-                                    <div class="w-100 my-4 p-4 animate-on-scroll kursna-lista-info">
-                                    <h3 class="font-weight-bold mb-3">Kursevi se stalno menjaju</h3>
-                                    
-                                    <p class="lead fw-medium">
-                                      Devizno tržište je dinamično i podložno svakodnevnim promenama. Naša menjačnica vam omogućava da u svakom trenutku imate uvid u najnovije kurseve valuta, ažurirane u realnom vremenu 
-                                      <br><br>
-                                      Transparentnost i tačnost su naši prioriteti – sve vrednosti na kursnoj listi redovno se usklađuju sa tržišnim kretanjima, kako biste doneli ispravne i pravovremene odluke
-                                      <br><br>
-                                      Bilo da planirate zamenu deviza, poslovne transakcije ili putovanje u inostranstvo, naša ažurirana kursna lista pruža vam pouzdane informacije na jednom mestu
-                                    </p>
-                                    
-                                    <p class="mt-3 lead fw-medium text-gold">
-                                      Kurs danas, profit sutra!
-                                    </p>
-
-
+                                    <div class="w-100 my-4 p-4 animate-on-scroll" style="background:none; box-shadow:none; border:none; border-radius:0;">
+                                        <h3 class="font-weight-bold mb-3">Kursevi se stalno menjaju...</h3>
+                                        <p class="lead fw-medium">
+                                          ...a vi ste na pravom mestu da ih ispratite! Da li ste znali da kurs švajcarca može da se promeni dok popijete kafu? Dolar voli da skače gore-dole kao na rolerkosteru, a funta se ponekad ponaša kao da je na čaju sa kraljicom.<br><br>
+                                          Zato pametni ljudi proveravaju kursnu listu svaki dan – jer ko prati, taj štedi! Kod nas su kursevi transparentni, ažurirani i uvek aktuelni. Ako ste od onih koji vole da kalkulišu, ovde ćete naći sve što vam treba za pametnu zamenu valuta.<br><br>
+                                          Ne dozvolite da vas iznenadi promena – kliknite, proverite, i budite u toku sa svetskim finansijama. Kursna lista je vaš mali finansijski barometar!
+                                        </p>
+                                        <p class="mt-3 lead fw-medium" style="color:#e3b448;">Kurs danas, profit sutra!</p>
+                                    </div>
                                 </div>
                             </div>
                 </div>
     </div>
-    </div>
 
     <!-- Investiciono zlato-->
-<section class="gold-luxury-banner my-5 py-5 text-light animate-on-scroll gold-luxury-banner-shadow">
+<section class="gold-luxury-banner my-5 py-5 text-light animate-on-scroll" style="box-shadow: 0 -0.75rem 1rem rgba(0, 0, 0, 0.15), 0 0.75rem 1rem rgba(0, 0, 0, 0.15);">
     <div class="container text-center text-md-start">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <h2 class="display-5 fw-bold mb-3 text-uppercase zlato-heading-gold">
+                <h2 class="display-5 fw-bold mb-3 text-uppercase" style="color: #e3b448;">
                     Prodaja investicionog zlata
                 </h2>
                 <p class="lead fw-medium mb-4">
-                    Ekskluzivna ponuda zlatnih dukata, poluga i pločica sa sertifikatom. Sigurna i dugoročna investicija
+                    Ekskluzivna ponuda zlatnih dukata, poluga i pločica sa sertifikatom. Sigurna i dugoročna investicija.
                 </p>
                 <a href="../mob app 2.0/zlato.html"
                    class="btn btn-lg px-4 py-2 fw-bold btn-gold">
@@ -338,50 +329,27 @@
 
 
        <!-- Sekcija za platni promet tekst levo slika desno placanje racuna-->
-  <div class="container my-4 platni-promet-section">
+    <div class="container my-4" style="padding-bottom: 50px;">
         <div class="row align-items-center">
             <!-- Levo tekst o platnom prometu -->
             <div class="col-lg-7 col-md-7 mb-4 mb-md-0 animate-on-scroll">
-                <h1 class="font-weight-bold mb-4">Platni promet</h1>
-             <p class="mb-3 lead fw-medium">
-                  U našim menjačnicama možete brzo i jednostavno obaviti sve vrste uplata platnog prometa na jednom mestu
-              </p>
-
-              <ul class="mb-4 lead fw-medium platni-promet-list">
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 icon-gold"></i>
-            Plaćanje računa za električnu energiju, komunalne usluge, telefon, internet i kablovsku televiziju
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 text-gold"></i>
-            Uplate po fakturama i predračunima
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 icon-gold"></i>
-            Uplate za kupovinu automobila, satova i drugih dobara
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 icon-gold"></i>
-            Uplata pazara za pravna lica
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 icon-gold"></i>
-            Uplate osiguranja, članarina i ostalih finansijskih obaveza
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check-circle mr-2 icon-gold"></i>
-            Uplata pazara za kurirske i dostavne servise (Wolt, Glovo, CarGo i drugi)
-          </li>
-              </ul>
-
-              <p class="text-muted lead fw-medium">
-                  Naš stručni tim vam je na raspolaganju
-              </p>
-
+                <h1 class="font-weight-bold mb-4" style="color:#e3b448;">Platni promet</h1>
+                <p class="mb-3 lead fw-medium" >
+                    U našoj menjačnici možete obaviti sve vrste platnog prometa i plaćanja računa na jednom mestu. Plaćajte račune za struju, komunalije, telefon, internet, kablovsku, kao i pazar za kurire brzo i bez čekanja.
+                </p>
+                <ul class="mb-4 lead fw-medium" style="list-style:none; ">
+                    <li class="mb-2"><i class="bi bi-check-circle mr-2" style="color:#e3b448;"></i> Plaćanje računa za struju, komunalije, telefon, internet, kablovsku</li>
+                    <li class="mb-2"><i class="bi bi-check-circle mr-2" style="color:#e3b448;"></i> Uplata pazara za kurire (Wolt, Glovo, CarGo)</li>
+                    
+                    <li class="mb-2"><i class="bi bi-check-circle mr-2" style="color:#e3b448;"></i> Uplata osiguranja, članarina i drugih obaveza</li>
+                </ul>
+                <p class="text-muted lead fw-medium">
+                    Naš tim je tu da vam pomogne i odgovori na sva pitanja vezana za platni promet i usluge menjačnice.
+                </p>
             </div>
             <!-- Desno slika -->
                         <div class="col-lg-5 col-md-5 text-right d-flex justify-content-end align-items-center animate-on-scroll">
-                <img src="img/platni.jpg" alt="Platni promet" class="img-fluid shadow platni-promet-img">
+                <img src="img/platni.jpg" alt="Platni promet" class="img-fluid shadow" style="border-radius: 32px;">
             </div>
         </div>
     </div>
@@ -389,7 +357,7 @@
 
 
     <!-- Kartice transfer servisa (card-transfers) -->
-  <section class="transfer-section py-5 stagger-group transfer-section-shadow" id="transferiNovca">
+        <section class="transfer-section py-5 stagger-group" id="transferiNovca" style=" box-shadow: 0 -0.75rem 1rem rgba(0, 0, 0, 0.15), 0  0.75rem 1rem rgba(0, 0, 0, 0.15);">
             <div class="container animate-on-scroll" >
                 <div class="row mb-4">
                     <div class="col-12 text-center">
@@ -462,7 +430,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="px-1">
-  <h1 class="font-weight-bold mb-2 text-center">Uplatno mesto za kurire</h1>
+        <h1 class="font-weight-bold mb-2" style="color:#e3b448; text-align: center;">Uplatno mesto za kurire</h1>
         <p class="lead fw-medium text-center">
           Ako ste kurir Glovo, Wolt ili CarGo, u našoj menjačnici možete brzo i jednostavno da uplatite svoj dnevni pazar
         </p>
@@ -496,27 +464,28 @@
       </div>
     </div>
     <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
-  <img src="img/kurir.png" alt="Kurir" class="img-fluid rounded main-img d-none d-md-block kurir-img-bg">
+        <img src="img/kurir.png" alt="Kurir" class="img-fluid rounded main-img main-img d-none d-md-block" style="opacity: 0.3; z-index: -1; max-width: 500px; margin-bottom: -70px; margin-left: -150px;">
 
     </div>
   </div>
 </div>
 
 <!--Drzavna lutrija srbije-->
-<div class="bg-danger stagger-group loto-section-bg">
+<div class="bg-danger stagger-group" style="z-index: 10;">
 <div class="container mt-4 loto-section">
   <div class="row">
 
     <div class="col-md-4 p-0 m-0">
     <img src="img/loto.png"
-  alt="Lutrija Srbija"
-  class="img-fluid rounded d-none d-md-block main-img loto-img-bg">
+     alt="Lutrija Srbija"
+     class="img-fluid rounded d-none d-md-block main-img"
+     style="max-width:100%; opacity: 0.6; z-index: 1;" >
 </div>
   
 
     <div class="col-md-8">
       <div class="py-5 ">
-      <h1 class="font-weight-bold mb-2 text-center text-light">Državna lutrija Srbije</h1>
+      <h1 class="font-weight-bold mb-2 text-center" style="color:#e3b448;">Državna lutrija Srbije</h1>
       <p class="mb-4 text-light text-center lead fw-medium">
         Okušaj sreću i postani deo najpoznatijih igara na sreću u Srbiji!  
         U našoj menjačnici možeš jednostavno da uplatiš 
@@ -558,33 +527,40 @@
 
 
 <!-- Sekcija: Uplata depozita za kladionice -->
-<section class="container my-5 pt-5 position-relative bet-deposit-section">
+<section class="container my-5 pt-5 position-relative" style="min-height:340px;">
     <!-- Pozadinska slika -->
-  <div class="bet-deposit-bg"></div>
-  <div class="row align-items-center animate-on-scroll bet-deposit-row">
+    <div style="
+        position:absolute;
+        top:0; left:0; width:100%; height:100%;
+        background: url('img/betBaner.png') center center / contain no-repeat;
+        opacity:0.18;
+        z-index:1;
+        border-radius:18px;
+        
+    "></div>
+    <div class="row align-items-center animate-on-scroll" style="position:relative; z-index:2;">
         <div class="col-md-7 mx-auto py-4">
             <h1 class="font-weight-bold mb-2">Uplata BET depozita</h1>
             <p class="lead fw-bold">
                 U našoj menjačnici možete brzo i jednostavno izvršiti uplatu depozita za najpoznatije kladionice u Srbiji. Bez čekanja, bez komplikacija – samo dođite, uplatite i igrajte!
             </p>
-            <ul class="list-unstyled mb-3 bet-deposit-list">
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> Meridian</li>
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> Mozzart</li>
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> MaxBet</li>
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> SoccerBet</li>
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> Admiral</li>
-                <li class="mb-2"><i class="bi bi-cash-coin mr-2 text-gold"></i> I dosta drugih</li>
+            <ul class="list-unstyled mb-3" style="font-weight:500;padding:0.5rem 1rem;">
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> Meridian</li>
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> Mozzart</li>
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> MaxBet</li>
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> SoccerBet</li>
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> Admiral</li>
+                <li class="mb-2"><i class="bi bi-cash-coin mr-2" style="color:#e3b448;"></i> I dosta drugih</li>
             </ul>
-            <p class="text-muted bet-deposit-info">
-                Uplate su instant, bez dodatnih troškova. Naš tim je tu da vam pomogne oko svakog koraka i odgovori na sva pitanja vezana za uplatu depozita
+            <p class="text-muted" style="font-size:1rem; font-weight:500;  padding:0.5rem 1rem;">
+                Uplate su instant, bez dodatnih troškova. Naš tim je tu da vam pomogne oko svakog koraka i odgovori na sva pitanja vezana za uplatu depozita.
             </p>
         </div>
     </div>
 </section>
 
-    
-<a href="tel:+381611340888" class="pulse-button pulse-button-fixed">
-  <i class="fa fa-phone phone-icon-large"></i>
+<a href="tel:+381601234567" class="pulse-button"style="position: fixed; bottom: 20px; right: 20px; background-color: green; color: white; border-radius: 50%; padding: 15px; z-index: 1000;">
+  <i class="fa fa-phone" style="font-size: 24px;"></i>
 </a>
 
 
