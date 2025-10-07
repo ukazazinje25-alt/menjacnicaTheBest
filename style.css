@@ -185,6 +185,7 @@ body {
     color: #111 !important;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: none;
+    padding-left: 10px;
 }
 
 .navbar .navbar-brand span:hover,
