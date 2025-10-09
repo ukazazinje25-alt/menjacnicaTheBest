@@ -639,7 +639,20 @@
   <i class="fa fa-phone" style="font-size: 24px;"></i>
 </a>
 
-<section class="container">
+<section class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+
+  <gmpx-api-loader 
+      key="TVOJ_API_KEY" 
+      solution-channel="GMP_QB_locatorplus_v11_cABD">
+  </gmpx-api-loader>
+
+  <gmpx-store-locator 
+      map-id="TVOJ_PRAVI_MAP_ID" 
+      style="width: 100%; max-width: 800px; height: 500px;">
+  </gmpx-store-locator>
+</section>
+
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
 
     <!-- Uses components from the Extended Component Library; see
