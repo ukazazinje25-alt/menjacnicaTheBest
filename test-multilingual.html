@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Test - Menjačnica The Best</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .language-selector { margin-bottom: 30px; }
+        .test-content { background: #f5f5f5; padding: 20px; border-radius: 8px; }
+        .test-item { margin-bottom: 15px; padding: 10px; background: white; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Multilingual System Test</h1>
+    
+    <div class="language-selector">
+        <label for="languageSelector">Choose Language:</label>
+        <select id="languageSelector">
+            <option value="sr">Serbian (SR)</option>
+            <option value="en">English (EN)</option>
+            <option value="ru">Russian (RU)</option>
+        </select>
+    </div>
+
+    <div class="test-content">
+        <div class="test-item">
+            <strong>Page Title:</strong> <span data-lang="page-title">Menjačnica The Best</span>
+        </div>
+        
+        <div class="test-item">
+            <strong>Navigation:</strong> 
+            <span data-lang="nav-currency-list">Kursna Lista</span> | 
+            <span data-lang="nav-money-transfers">Transferi Novca</span> | 
+            <span data-lang="nav-investment-gold">Investiciono zlato</span>
+        </div>
+        
+        <div class="test-item">
+            <strong>Hero Section:</strong> 
+            <div data-lang="hero-title">Menjačnica <span style="color:#e3b448;">The Best</span></div>
+            <small data-lang="hero-subtitle">Savremeno zakazivanje transakcija, profesionalna usluga i maksimalna sigurnost za vaše finansije.</small>
+        </div>
+        
+        <div class="test-item">
+            <strong>Form Labels:</strong><br>
+            <label data-lang="form-name">Ime:</label><br>
+            <input type="text" data-lang="form-name-placeholder" placeholder="Vaše ime"><br><br>
+            <label data-lang="form-contact">Broj telefona ili email:</label><br>
+            <input type="text" data-lang="form-contact-placeholder" placeholder="Telefon ili email">
+        </div>
+        
+        <div class="test-item">
+            <strong>Currency Names:</strong>
+            <span data-lang="currency-eur">Evro</span>, 
+            <span data-lang="currency-usd">Američki dolar</span>, 
+            <span data-lang="currency-gbp">Britanska funta</span>
+        </div>
+        
+        <div class="test-item">
+            <strong>Why Choose Us:</strong>
+            <div data-lang="why-title-1">Otkup i Prodaja<br> Velikih Iznosa</div>
+            <small data-lang="why-desc-1">Bez obzira na iznos, uspešno završavamo svaku transakciju brzo i pouzdano.</small>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script>
+        // Add some debug info
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Language Manager initialized');
+            console.log('Available languages:', Object.keys(translations));
+            console.log('Current language:', window.languageManager?.getCurrentLanguage());
+        });
+    </script>
+</body>
+</html>

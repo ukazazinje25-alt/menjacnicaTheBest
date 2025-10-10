@@ -1,6 +1,9 @@
 // Multilingual translations for Menjacnica The Best
 const translations = {
     sr: {
+        // Page title
+        'page-title': 'Menjačnica The Best',
+        
         // Navigation
         'nav-currency-list': 'Kursna Lista',
         'nav-money-transfers': 'Transferi Novca',
@@ -102,6 +105,9 @@ const translations = {
     },
     
     en: {
+        // Page title
+        'page-title': 'Exchange Office The Best',
+        
         // Navigation
         'nav-currency-list': 'Exchange Rates',
         'nav-money-transfers': 'Money Transfers',
@@ -203,6 +209,9 @@ const translations = {
     },
     
     ru: {
+        // Page title
+        'page-title': 'Обменный пункт The Best',
+        
         // Navigation
         'nav-currency-list': 'Курсы валют',
         'nav-money-transfers': 'Денежные переводы',
@@ -347,8 +356,11 @@ class LanguageManager {
         elements.forEach(element => {
             const key = element.getAttribute('data-lang');
             if (translations[this.currentLanguage] && translations[this.currentLanguage][key]) {
-                if (element.tagName === 'INPUT' && element.type === 'text' || element.type === 'email') {
+                if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'email' || element.type === 'number')) {
                     element.placeholder = translations[this.currentLanguage][key];
+                } else if (element.tagName === 'TITLE') {
+                    element.textContent = translations[this.currentLanguage][key];
+                    document.title = translations[this.currentLanguage][key];
                 } else {
                     element.innerHTML = translations[this.currentLanguage][key];
                 }
@@ -357,6 +369,18 @@ class LanguageManager {
 
         // Update document language attribute
         document.documentElement.lang = this.currentLanguage;
+        
+        // Update placeholder for calculator inputs that might be dynamically updated
+        this.updateCalculatorPlaceholders();
+    }
+
+    updateCalculatorPlaceholders() {
+        const calcOutput = document.getElementById('calcOutput');
+        if (calcOutput && calcOutput.value === '') {
+            if (translations[this.currentLanguage] && translations[this.currentLanguage]['form-output-placeholder']) {
+                calcOutput.placeholder = translations[this.currentLanguage]['form-output-placeholder'];
+            }
+        }
     }
 
     getCurrentLanguage() {

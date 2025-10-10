@@ -81,7 +81,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menjacnica The Best</title>
+    <title data-lang="page-title">Menjačnica The Best</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -662,8 +662,8 @@
 
       <!-- O Menjačnici -->
       <div class="col-lg-4 col-md-6 about">
-        <h5>O Menjačnici The Best</h5>
-        <p>
+        <h5 data-lang="footer-about-title">O Menjačnici The Best</h5>
+        <p data-lang="footer-about-text">
           Menjačnica <strong>The Best</strong> posluje decenijama, pružajući klijentima najpovoljnije kurseve valuta, sigurne transfere novca i mogućnost investiranja u investiciono zlato. Naš tim stručnjaka posvećen je transparentnosti i profesionalnom pristupu.
         </p>
         <p>
@@ -676,7 +676,7 @@
 
       <!-- Brze veze -->
       <div class="col-lg-2 col-md-6 links">
-        <h5>Brze veze</h5>
+        <h5 data-lang="footer-links-title">Brze veze</h5>
         <ul>
           <li><a href="index.html">Početna</a></li>
           <li><a href="kurs.html">Kursna lista</a></li>
@@ -689,7 +689,7 @@
 
       <!-- Kontakt -->
       <div class="col-lg-3 col-md-6 contact" >
-        <h5>Kontakt i društvene mreže</h5>
+        <h5 data-lang="footer-contact-title">Kontakt i društvene mreže</h5>
         <p><i class="bi bi-geo-alt-fill me-2"></i>Sarajevska 38, Beograd</p>
         <p><i class="bi bi-geo-alt-fill me-2"></i>Dzordza Vasingtona 28, Beograd</p>
         <p><i class="bi bi-telephone-fill me-2"></i>+381 61 1340888</p>
@@ -704,13 +704,13 @@
 
       <!-- Newsletter -->
       <div class="col-lg-3 col-md-6 newsletter">
-        <h5>Pretplatite se na newsletter</h5>
-        <p>
+        <h5 data-lang="footer-newsletter-title">Pretplatite se na newsletter</h5>
+        <p data-lang="footer-newsletter-text">
           Pratite naše najnovije ponude, specijalne akcije, novosti iz sveta investicionog zlata i savete za pametno investiranje direktno u vaš inbox.
         </p>
         <form class="d-flex flex-column gap-2">
-          <input type="email" class="form-control my-1" placeholder="Vaš email">
-          <button type="submit" class="btn">Prijavi se</button>
+          <input type="email" class="form-control my-1" data-lang="footer-email-placeholder" placeholder="Vaš email">
+          <button type="submit" class="btn" data-lang="footer-subscribe">Prijavi se</button>
         </form>
       </div>
 
@@ -721,7 +721,7 @@
     <!-- Dodatne informacije / tekst -->
     <div class="row g-4">
       <div class="col-md-6">
-        <h6>Zašto investirati u investiciono zlato?</h6>
+        <h6 data-lang="footer-investment-title">Zašto investirati u investiciono zlato?</h6>
         <p>
           Investiciono zlato je dugoročno stabilna i sigurna imovina koja štiti vašu kupovnu moć od inflacije i globalnih ekonomskih turbulencija. Zlatne poluge i zlatnici predstavljaju fizički i opipljiv kapital koji možete koristiti kao sigurnu rezervu u nepredviđenim situacijama.
         </p>
@@ -733,7 +733,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <h6>Naša misija i posvećenost</h6>
+        <h6 data-lang="footer-mission-title">Naša misija i posvećenost</h6>
         <p>
           Misija Menjačnice The Best je pružiti sigurno i transparentno okruženje za sve vrste finansijskih transakcija. Naša posvećenost klijentima ogleda se u pouzdanim savetima, stručnom timu i maksimalnoj sigurnosti svih operacija. 
         </p>
@@ -748,11 +748,11 @@
     <!-- Donji deo -->
     <div class="text-center bottom-text">
       <small>
-        &copy; <span id="footerYear"></span> Menjačnica The Best. Sva prava zadržana. 
+        &copy; <span id="footerYear"></span> <span data-lang="footer-copyright">Menjačnica The Best. Sva prava zadržana.</span>
         <br>
-        <a href="#">Politika privatnosti</a> | 
-        <a href="#">Uslovi korišćenja</a> | 
-        <a href="#">Kontakt</a>
+        <a href="#" data-lang="footer-privacy">Politika privatnosti</a> | 
+        <a href="#" data-lang="footer-terms">Uslovi korišćenja</a> | 
+        <a href="#" data-lang="footer-contact">Kontakt</a>
       </small>
     </div>
   </div>
@@ -762,6 +762,8 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Multilingual support -->
+        <script src="translations.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
             // Svi elementi sa animacijom
