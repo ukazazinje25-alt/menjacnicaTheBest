@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# High-priority pages
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Allow important directories
+Allow: /img/
+Allow: /style.css
+Allow: /translations.js
+
+# Block admin or sensitive areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /test-multilingual.html
+
+# Sitemap location
+Sitemap: https://www.menjacnicathebest.rs/sitemap.xml
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+
+# Cache directive for better performance
+# Cache-control: public, max-age=86400

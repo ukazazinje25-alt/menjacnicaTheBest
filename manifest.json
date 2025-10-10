@@ -1,0 +1,84 @@
+{
+  "name": "Menjačnica The Best - Najbolji kursevi valuta u Beogradu",
+  "short_name": "Menjačnica The Best",
+  "description": "Najpovoljniji kursevi valuta, sigurni transferi novca i investiciono zlato. Dve lokacije u Beogradu.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#e3b448",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "sr-RS",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "img/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicon-32x32.png", 
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "business", "exchange"],
+  "shortcuts": [
+    {
+      "name": "Kursna lista",
+      "short_name": "Kursevi",
+      "description": "Pogledaj trenutne kurseve valuta",
+      "url": "/#kursnaLista",
+      "icons": [
+        {
+          "src": "img/currency-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Transferi novca",
+      "short_name": "Transferi",
+      "description": "Međunarodni transferi novca",
+      "url": "/#transferiNovca",
+      "icons": [
+        {
+          "src": "img/transfer-icon.png",
+          "sizes": "192x192", 
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Lokacije",
+      "short_name": "Lokacije",
+      "description": "Naše poslovnice u Beogradu",
+      "url": "/#lokacije",
+      "icons": [
+        {
+          "src": "img/location-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
