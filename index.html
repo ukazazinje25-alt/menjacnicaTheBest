@@ -519,20 +519,12 @@
 
   /* Dugme hover */
   .modal-btn:hover {
-    background-color: #d4a937; /* tamnija zlatna nijansa */
+    background-color: #222;; /* tamnija zlatna nijansa */
     transform: translateY(-1px);
     transition: all 0.15s ease-in-out;
   }
 
-  /* Blur pozadine dok je modal otvoren */
-  body.modal-open::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(4px);
-    z-index: 1040; /* iza modala, ali iznad sajta */
-  }
+
 </style>
 
 <script>
