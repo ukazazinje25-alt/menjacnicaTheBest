@@ -505,36 +505,6 @@
   </div>
 </div>
 
-<style>
-  /* Animacija modal sadržaja */
-  .animate-modal {
-    transform: scale(0.9);
-    opacity: 0;
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-  }
-  .modal.show .animate-modal {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  /* Dugme hover */
-  .modal-btn:hover {
-    background-color: #222;; /* tamnija zlatna nijansa */
-    transform: translateY(-1px);
-    transition: all 0.15s ease-in-out;
-  }
-
-
-</style>
-
-<script>
-  document.getElementById('currencyCalc').addEventListener('submit', function(e) {
-    e.preventDefault(); // sprečava slanje forme
-    const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
-    thankYouModal.show();
-    this.reset(); // čisti formu
-  });
-</script>
 
 
 
