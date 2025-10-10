@@ -483,19 +483,23 @@
   </div>
 </form>
 
-<!-- ✅ MODAL -->
+<!-- MODAL -->
 <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="thankYouModalLabel">Hvala!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
-      </div>
-      <div class="modal-body">
-        ✅ Naš operater će Vas uskoro kontaktirati.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+    <div class="modal-content shadow-lg rounded-4 border-0">
+      <div class="modal-body text-center py-5 px-4">
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#e3b448" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.97 11.03a.75.75 0 0 0 1.07 0l3.992-3.992a.75.75 0 0 0-1.06-1.06L7.5 9.439 5.992 7.93a.75.75 0 1 0-1.06 1.06l2.038 2.04z"/>
+          </svg>
+        </div>
+        <h5 class="modal-title mb-2" id="thankYouModalLabel" style="font-weight:600; color:#222;">Hvala!</h5>
+        <p class="text-muted mb-4" style="font-size:1rem;">
+          Naš operater će Vas uskoro kontaktirati.
+        </p>
+        <button type="button" class="btn btn-warning px-4 py-2 fw-semibold" data-bs-dismiss="modal" style="border-radius:50px;">
+          Zatvori
+        </button>
       </div>
     </div>
   </div>
@@ -507,9 +511,10 @@
     e.preventDefault(); // sprečava slanje forme
     const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
     thankYouModal.show();
-    this.reset(); // opcionalno — čisti formu
+    this.reset(); // čisti formu
   });
 </script>
+
 
 
                     <div id="calcResult" class="mt-4" style="font-size:1.2rem; color:#222;" aria-live="polite"></div>
