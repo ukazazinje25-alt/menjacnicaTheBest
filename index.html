@@ -486,7 +486,7 @@
 <!-- MODAL -->
 <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content shadow-lg rounded-4 border-0">
+    <div class="modal-content shadow-lg rounded-4 border-0 animate-modal">
       <div class="modal-body text-center py-5 px-4">
         <div class="mb-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#e3b448" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -497,7 +497,7 @@
         <p class="text-muted mb-4" style="font-size:1rem;">
           Naš operater će Vas uskoro kontaktirati.
         </p>
-        <button type="button" class="btn btn-warning px-4 py-2 fw-semibold" data-bs-dismiss="modal" style="border-radius:50px;">
+        <button type="button" class="btn btn-warning px-4 py-2 fw-semibold modal-btn" data-bs-dismiss="modal" style="border-radius:50px;">
           Zatvori
         </button>
       </div>
@@ -505,8 +505,28 @@
   </div>
 </div>
 
+<style>
+  /* Animacija modal sadržaja */
+  .animate-modal {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.35s ease-out, opacity 0.35s ease-out;
+  }
+  .modal.show .animate-modal {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Dugme hover */
+  .modal-btn:hover {
+    background-color: #d4a937; /* tamnija zlatna nijansa */
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+  }
+</style>
+
 <script>
-  // Kada se forma pošalje, spreči reload i otvori modal
+  // Otvaranje modala sa animacijom
   document.getElementById('currencyCalc').addEventListener('submit', function(e) {
     e.preventDefault(); // sprečava slanje forme
     const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
@@ -514,6 +534,7 @@
     this.reset(); // čisti formu
   });
 </script>
+
 
 
 
