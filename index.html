@@ -513,7 +513,7 @@
         </div>
         <h5 class="modal-title mb-2" id="transactionModalLabel" style="font-weight:600; color:#222;">Hvala!</h5>
         <p class="text-muted mb-3" style="font-size:1rem;">
-          Vaš zahtev je uspešno poslat. Naš operater će Vas uskoro kontaktirati.
+          Vaš zahtev je uspešno poslat. <br>Naš operater će Vas uskoro kontaktirati.
         </p>
         <button type="button" class="btn btn-warning px-4 py-2 fw-semibold" data-dismiss="modal" style="border-radius:8px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
           Zatvori
@@ -1144,8 +1144,6 @@
 
             // Modal functionality for form submission
             document.getElementById('currencyCalc').addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent default form submission
-                
                 // Validate required fields
                 const name = document.getElementById('name').value;
                 const contact = document.getElementById('contact').value;
@@ -1153,6 +1151,7 @@
                 const agreeTerms = document.getElementById('agreeTerms').checked;
                 
                 if (!name || !contact || !amount || !agreeTerms) {
+                    e.preventDefault(); // Only prevent submission if validation fails
                     alert('Molimo popunite sva obavezna polja i prihvatite uslove korišćenja.');
                     return;
                 }
@@ -1160,8 +1159,8 @@
                 // Show the modal
                 $('#transactionModal').modal('show');
                 
-                // Optional: You can still submit the form data here if needed
-                // this.submit();
+                // Let the form submit normally to FormSubmit (email will be sent)
+                // The modal will show while the form is being processed
             });
 
 
