@@ -405,36 +405,72 @@
                     <div class="special-offer-animated p-3 mb-3 text-center" role="banner" aria-label="Trenutni kurs">
                         <div class="special-offer-rate">1 EUR = 117.00 RSD</div>
                     </div>
-                 <form action="https://formsubmit.co/menjacnicathebest@gmail.com" 
+                   <form action="https://formsubmit.co/menjacnicathebest@gmail.com" 
       method="POST" 
       id="currencyCalc" 
       class="needs-validation" 
-      novalidate>
-  
-  <!-- 👇 ovo polje kaže formsubmit-u gde da te preusmeri posle slanja -->
+      novalidate 
+      role="form" 
+      aria-labelledby="currency-calculator">
+
+  <!-- 👇 ovo polje kaže formsubmit-u gde da te preusmeri posle slanja 
+  <input type="hidden" name="_next" value="https://menjacnicathebest.com">-->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="Nova transakcija sa sajta">
 
-  <!-- ostatak tvoje forme (ime, kontakt, iznos, valuta...) -->
+    <h3 id="currency-calculator" class="sr-only">Kalkulator za razmenu valuta</h3>
 
+  <form id="currencyCalc" class="needs-validation" novalidate>
   <div class="form-row mb-3">
     <div class="col-md-6">
-      <label for="name" class="font-weight-bold">Ime:</label>
+      <label for="name" class="font-weight-bold" data-lang="form-name">Ime:</label>
       <input type="text" name="ime" class="form-control" id="name" placeholder="Vaše ime" required>
     </div>
     <div class="col-md-6">
-      <label for="contact" class="font-weight-bold">Broj telefona ili email:</label>
+      <label for="contact" class="font-weight-bold" data-lang="form-contact">Broj telefona ili email:</label>
       <input type="text" name="kontakt" class="form-control" id="contact" placeholder="Telefon ili email" required>
     </div>
   </div>
 
-  <!-- ... ostala polja forme ... -->
+  <div class="form-row mb-3">
+    <div class="col-12">
+      <label class="font-weight-bold" data-lang="form-amount-currency">Iznos i valuta:</label>
+
+      <div class="input-group mb-2">
+        <select name="valuta_od" class="btn btn-outline-warning dropdown-toggle" id="fromCurrency" required
+                style="max-width:140px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="CHF">CHF</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="RSD">RSD</option>
+        </select>
+        <input type="number" name="iznos" class="form-control" id="amount" placeholder="Unesite iznos" min="0" step="any" required>
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="iznos_preračunat" class="form-control" id="calcOutput" placeholder="Dobijeni iznos" readonly>
+        <select name="valuta_u" class="btn btn-outline-warning dropdown-toggle" id="toCurrencyOutput"
+                style="max-width:140px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
+          <option value="RSD">RSD</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="CHF">CHF</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+        </select>
+      </div>
+    </div>
+  </div>
 
   <div class="form-row mb-3">
     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="agreeTerms" required>
-        <label class="form-check-label" for="agreeTerms">
+        <label class="form-check-label" for="agreeTerms" data-lang="form-terms">
           Slažem se sa <a href="#uslovi" target="_blank">uslovima korišćenja</a>
         </label>
       </div>
@@ -442,25 +478,15 @@
   </div>
 
   <button type="submit" class="btn btn-outline-warning btn-block"
-          style="width:100%; color:#fff; background-color:#e3b448; border-color:#e3b448;">
+          style="width:100%; color:#fff; background-color:#e3b448; border-color:#e3b448;"
+          data-lang="form-submit">
     Zakaži transakciju
   </button>
+
+  <div class="mt-2 text-muted small" data-lang="form-note">
+    *Kursevi su uzeti iz <a href="#kursnaLista">kursne liste</a>
+  </div>
 </form>
-
-
-<!-- 👇 ALERT koji se pojavljuje ako je ?success=1 -->
-<div id="successAlert" class="alert alert-success alert-dismissible fade show mt-3 d-none" role="alert">
-  ✅ Hvala! Vaša poruka je uspešno poslata.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<script>
-  // Ako URL sadrži ?success=1 → prikaži alert
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('success') === '1') {
-    document.getElementById('successAlert').classList.remove('d-none');
-  }
-</script>
 
 
 
