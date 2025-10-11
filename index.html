@@ -483,6 +483,20 @@
   </div>
 </form>
 
+<!-- 👇 ALERT koji se pojavljuje ako je ?success=1 -->
+<div id="successAlert" class="alert alert-success alert-dismissible fade show mt-3 d-none" role="alert">
+  ✅ Hvala! Vaša poruka je uspešno poslata.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<script>
+  // Ako URL sadrži ?success=1 → prikaži alert
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === '1') {
+    document.getElementById('successAlert').classList.remove('d-none');
+  }
+</script>
+
 
 
 
