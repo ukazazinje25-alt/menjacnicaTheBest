@@ -414,7 +414,7 @@
       aria-labelledby="currency-calculator">
 
   <!-- 👇 ovo polje kaže formsubmit-u gde da te preusmeri posle slanja -->
-  <input type="hidden" name="_next" value="https://menjacnicathebest.com">
+  <input type="hidden" name="_next" value="https://menjacnicathebest.com/modal">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="Nova transakcija sa sajta">
 
@@ -1141,27 +1141,6 @@
             document.getElementById('amount').addEventListener('input', preracunaj);
             document.getElementById('fromCurrency').addEventListener('change', preracunaj);
             document.getElementById('toCurrencyOutput').addEventListener('change', preracunaj);
-
-            // Modal functionality for form submission
-            document.getElementById('currencyCalc').addEventListener('submit', function(e) {
-                // Validate required fields
-                const name = document.getElementById('name').value;
-                const contact = document.getElementById('contact').value;
-                const amount = document.getElementById('amount').value;
-                const agreeTerms = document.getElementById('agreeTerms').checked;
-                
-                if (!name || !contact || !amount || !agreeTerms) {
-                    e.preventDefault(); // Only prevent submission if validation fails
-                    alert('Molimo popunite sva obavezna polja i prihvatite uslove korišćenja.');
-                    return;
-                }
-                
-                // Show the modal
-                $('#transactionModal').modal('show');
-                
-                // Let the form submit normally to FormSubmit (email will be sent)
-                // The modal will show while the form is being processed
-            });
 
 
         </script>
