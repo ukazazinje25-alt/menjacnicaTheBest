@@ -501,7 +501,27 @@
 </section>
 
 
-
+<!--Modal-->
+<div class="modal fade" id="transactionModal" tabindex="-1" role="dialog" aria-labelledby="transactionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg rounded-2 border-0">
+      <div class="modal-body text-center py-4 px-4">
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#e3b448" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.97 11.03a.75.75 0 0 0 1.07 0l3.992-3.992a.75.75 0 0 0-1.06-1.06L7.5 9.439 5.992 7.93a.75.75 0 1 0-1.06 1.06l2.038 2.04z"/>
+          </svg>
+        </div>
+        <h5 class="modal-title mb-2" id="transactionModalLabel" style="font-weight:600; color:#222;">Hvala!</h5>
+        <p class="text-muted mb-3" style="font-size:1rem;">
+          Vaš zahtev je uspešno poslat. Naš operater će Vas uskoro kontaktirati.
+        </p>
+        <button type="button" class="btn btn-warning px-4 py-2 fw-semibold" data-dismiss="modal" style="border-radius:8px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
+          Zatvori
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ZASTO MI SEKCIJA -->
 <section class="zastoSekcija stagger-group" aria-labelledby="why-choose-us">
@@ -1121,6 +1141,28 @@
             document.getElementById('amount').addEventListener('input', preracunaj);
             document.getElementById('fromCurrency').addEventListener('change', preracunaj);
             document.getElementById('toCurrencyOutput').addEventListener('change', preracunaj);
+
+            // Modal functionality for form submission
+            document.getElementById('currencyCalc').addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Validate required fields
+                const name = document.getElementById('name').value;
+                const contact = document.getElementById('contact').value;
+                const amount = document.getElementById('amount').value;
+                const agreeTerms = document.getElementById('agreeTerms').checked;
+                
+                if (!name || !contact || !amount || !agreeTerms) {
+                    alert('Molimo popunite sva obavezna polja i prihvatite uslove korišćenja.');
+                    return;
+                }
+                
+                // Show the modal
+                $('#transactionModal').modal('show');
+                
+                // Optional: You can still submit the form data here if needed
+                // this.submit();
+            });
 
 
         </script>
