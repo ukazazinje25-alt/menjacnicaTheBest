@@ -1,4 +1,71 @@
-/* Sticky Header - Both navbars together */
+/* ===== CSS VARIABLES ===== */
+:root {
+    --primary: #1a2238; /* tamno plava */
+    --secondary: #e3b448; /* zlatna */
+    --accent: #ff6a3d; /* narandžasta za akcente */
+    --background: #f7f6f2; /* svetlo bež */
+    --card-bg: #fffbe6; /* zlatno-bež za kartice */
+    --text: #22223b; /* tamno siva/plava za tekst */
+    --success: #4bb543; /* zelena za uspeh */
+    --danger: #d7263d; /* crvena za greške */
+    --gold: #e3b448; /* zlatna */
+    --navy: #1a2238; /* tamno plava */
+    --beige: #f7f6f2; /* bež */
+    --gold-dark: #b8962e;
+    --gold-light: #fff8e1;
+    --bg-dark: #111;
+    --text-light: #f5f5f5;
+    --separator: #333;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(40, 167, 69, 1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+}
+
+/* ===== HEADER & NAVIGATION ===== */
 .sticky-header {
     position: fixed;
     top: 0;
@@ -15,19 +82,14 @@
     transform: translateY(-100%);
 }
 
-/* Add top padding to main content to account for fixed header */
-main {
-    padding-top: 80px; /* Adjust based on header height */
+/* Top navbar styles */
+.navbar-top {
+    background-color: #23272b !important; /* Bootstrap bg-dark, ali nijansa svetlija od crne */
+    color: #fff !important;
+    border-bottom: none !important;
+    font-size: 1rem;
 }
 
-/* Responsive adjustments for header */
-@media (max-width: 768px) {
-    main {
-        padding-top: 80px;
-    }
-}
-
-/* Prigovori link u top navbaru kao nav-link */
 .navbar-top a.prigovori-link {
     color: #fff !important;
     text-decoration: none !important;
@@ -35,153 +97,13 @@ main {
     padding: 0.7rem 1rem;
     transition: color 0.2s;
 }
+
 .navbar-top a.prigovori-link:hover,
 .navbar-top a.prigovori-link:focus {
     color: #e3b448 !important;
 }
 
-/* Transferi novca sekcija - posebna pozadina */
-.transfer-section {
-    background: linear-gradient(300deg, #e3b448, #f7f6f2, #e3b448);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-.red-section {
-    background: linear-gradient(140deg, #ff0000 0%, #f7f6f2 100%);
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    position: relative;
-    z-index: 1;
-}
-
-.hero-bg .card {
-    background: rgba(255,255,255,0.10); /* more transparent */
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
-    backdrop-filter: blur(10px); /* stronger blur */
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,0.12);
-    z-index: 2;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 520px;
-    max-width: 95vw;
-}
-.hero-bg {
-    background: linear-gradient(120deg, #fffbe6 0%, #f7f6f2 60%, #fff 100%);
-    overflow: hidden;
-    position: relative;
-}
-.hero-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100vw; height: 100%;
-    z-index: 0;
-    pointer-events: none;
-    background: none;
-}
-.hero-bg .hero-art {
-    position: absolute;
-    top: 0; left: 0; width: 100vw; height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-.hero-bg .hero-art svg {
-    width: 100vw;
-    height: 100%;
-    display: block;
-}
-.hero-bg .hero-art .currency {
-    position: absolute;
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #e3b448;
-    opacity: 0.7;
-    pointer-events: none;
-    user-select: none;
-}
-.hero-bg .row, .hero-bg .card {
-    position: relative;
-    z-index: 1;
-}
-.white-bg-section {
-    background: #fff;
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    min-height: 1px;
-}
-.hero-divider {
-    width: 100vw;
-    height: 60px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    z-index: 2;
-    background: transparent;
-    pointer-events: none;
-}
-.hero-divider svg {
-    display: block;
-    width: 100vw;
-    height: 60px;
-}
-
-
-/* Osnovne boje projekta */
-
-.hero-full {
-    width: 100%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: #fffbe6;
-}
-.hero-bg {
-    position: relative;
-    overflow: hidden;
-    background-color: #fffbe6;
-}
-
-.hero-bg > * {
-    position: relative;
-    z-index: 1;
-}
-:root {
-    --primary: #1a2238; /* tamno plava */
-    --secondary: #e3b448; /* zlatna */
-    --accent: #ff6a3d; /* narandžasta za akcente */
-    --background: #f7f6f2; /* svetlo bež */
-    --card-bg: #fffbe6; /* zlatno-bež za kartice */
-    --text: #22223b; /* tamno siva/plava za tekst */
-    --success: #4bb543; /* zelena za uspeh */
-    --danger: #d7263d; /* crvena za greške */
-    --gold: #e3b448; /* zlatna */
-    --navy: #1a2238; /* tamno plava */
-    --beige: #f7f6f2; /* bež */
-}
-body {
-    overflow-x: hidden;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #222;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar stil */
+/* Main navbar styles */
 .navbar {
     background-color: #fff !important;
     border-bottom: 2px solid var(--gold);
@@ -204,12 +126,13 @@ body {
     transition: color 0.2s;
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link:focus {
     color: var(--gold) !important;
     background: none;
 }
 
-/* Logo stil - bold, crn, bez hover efekta */
+/* Logo styling */
 .navbar .navbar-brand span {
     color: #111 !important;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -222,116 +145,143 @@ body {
     color: #111 !important;
 }
 
-/* Sve transfer kartice iste veličine, zaobljene, bez ivica */
-/* Osnovne dimenzije */
-.card-transfers {
-    width: 180px;
-    height: 180px;
-    border-radius: 1rem;
-    border: none;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+/* ===== HERO SECTION ===== */
+.hero-full {
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #fffbe6;
+}
+
+.hero-bg {
+    background: linear-gradient(120deg, #fffbe6 0%, #f7f6f2 60%, #fff 100%);
+    overflow: hidden;
+    position: relative;
+    background-color: #fffbe6;
+}
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100vw; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background: none;
+}
+
+.hero-bg .hero-art {
+    position: absolute;
+    top: 0; left: 0; width: 100vw; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-bg .hero-art svg {
+    width: 100vw;
+    height: 100%;
+    display: block;
+}
+
+.hero-bg .hero-art .currency {
+    position: absolute;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #e3b448;
+    opacity: 0.7;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hero-bg .row, 
+.hero-bg .card {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-bg .card {
+    background: rgba(255,255,255,0.10);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.12);
+    z-index: 2;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    max-width: 95vw;
+}
+
+/* Hero image and circles */
+.hero-circle-wrap {
+    position: relative;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
 }
 
-.card-transfers .card-title {
-        font-size: 1.3rem;
-        height: 2.6rem; /* prilagođeno za manju visinu */
-        line-height: 1.3rem;
-    }
-
-/* Slika unutar kartice */
-.card-transfers img {
-    width: 120px !important;
-    height: 120px !important;
-    object-fit: contain;
-    margin: 0 auto 6px auto !important;
-    padding: 6px !important;
-    display: block;
-    background: none;
-    transition: all 0.3s ease;
-}
-
-
-
-/* Card stil */
-.card-transfers:hover {
-    transform: scale(1.02);
-    z-index: 2;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.18) !important;
-}
-
-
-/* Prisilno veće slike u transfer karticama */
-.card-transfers img {
-    width: 120px !important;
-    height: 120px !important;
-    object-fit: contain;
-    margin: 0 auto 2px auto !important;
-    padding: 6px !important;
-    display: block;
-    background: none;
-}
-
-@media (max-width: 400px) {
-    .card-transfers {
-        max-width: 150px;
-        height: 150px;
-    }
-
-    .card-transfers .card-img-top {
-        max-width: 90px;
-        max-height: 90px;
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .card-transfers .card-title {
-        font-size: 1.3rem;
-        height: 2.6rem; /* prilagođeno za manju visinu */
-        line-height: 1.3rem;
-    }
-}
-
-
-/* Smanjen padding za card-body */
-.card-body {
-    padding: 0.3rem !important;
-}
-
-/* MODAL STYLES */
-.modal-content.modal-rounded {
-    border-radius: 18px;
-}
-.modal-tall {
-    min-height: 450px;
-}
-.modal-img-rounded {
-    border-radius: 18px 0 0 18px;
-    object-fit: contain;
-}
-
-/* Hero image styling */
 .hero-img {
-    border-radius: 24px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    position: relative;
+    z-index: 3;
     max-width: 100%;
     height: auto;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     padding: 0;
     margin: 0;
 }
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
 .hero-img-container {
     padding: 0;
     margin: 0;
 }
 
+/* Zlatni prsten sa gradientom */
+.gold-ring {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: spin 8s linear infinite;
+    background: conic-gradient(
+        from 0deg,
+        #e3b448 0deg 40deg,
+        transparent 40deg 180deg,
+        #f7e7a0 180deg 220deg,
+        transparent 220deg 360deg
+    );
+    -webkit-mask: radial-gradient(farthest-side, transparent 65%, black 66%);
+    mask: radial-gradient(farthest-side, transparent 65%, black 66%);
+    opacity: 0.95;
+}
 
-/* Hero title styling */
+.gold-ring.ring2 {
+    width: 460px;
+    height: 460px;
+    animation: spin 14s linear infinite reverse;
+    background: conic-gradient(
+        from 90deg,
+        #f7e7a0 0deg 20deg,
+        transparent 20deg 200deg,
+        #e3b448 200deg 240deg,
+        transparent 240deg 360deg
+    );
+    -webkit-mask: radial-gradient(farthest-side, transparent 80%, black 81%);
+    mask: radial-gradient(farthest-side, transparent 80%, black 81%);
+    opacity: 0.7;
+}
+
+/* Hero typography */
 .hero-title {
     font-size: 2.3rem;
     letter-spacing: -1px;
@@ -339,26 +289,31 @@ body {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+
 .hero-title-black {
     color: #222;
     font-weight: bold;
 }
+
 .hero-title-gold {
     color: #e3b448;
     font-weight: bold;
 }
+
 .hero-typewriter-row {
     gap: 12px;
     margin-bottom: 6px;
     display: flex;
     align-items: center;
 }
+
 .hero-typewriter-label {
     font-size: 1.15rem;
     color: #555;
     font-weight: 500;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 .hero-typewriter {
     font-size: 1.25rem;
     color: #e3b448;
@@ -369,7 +324,25 @@ body {
     transition: opacity 0.2s;
 }
 
-/* Specijalna ponuda animacija za kalkulator */
+.hero-divider {
+    width: 100vw;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 2;
+    background: transparent;
+    pointer-events: none;
+}
+
+.hero-divider svg {
+    display: block;
+    width: 100vw;
+    height: 60px;
+}
+
+/* ===== CALCULATOR & SPECIAL OFFERS ===== */
 .special-offer-animated {
     background: linear-gradient(
         270deg, 
@@ -389,11 +362,7 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-@keyframes gradientBG {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
-}
+
 .special-offer-title {
     font-size: 1.3rem;
     font-weight: bold;
@@ -402,19 +371,26 @@ body {
     margin-bottom: 0.3rem;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 .special-offer-rate {
     font-size: 1.1rem;
     color: var(--navy);
     font-weight: 600;
     margin-bottom: 0.2rem;
 }
+
 .special-offer-eur {
     color: var(--accent);
     font-weight: bold;
     font-size: 1.15rem;
 }
 
-/* Currency cards modern style */
+/* ===== CARDS & TRANSFER SECTIONS ===== */
+.card.shadow-sm {
+    border: none !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10) !important;
+}
+
 .currency-card {
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -424,199 +400,164 @@ body {
     transition: box-shadow 0.2s;
 }
 
-/* Kalkulator valuta kartica bez ivica i sa blagom senkom */
-.card.shadow-sm {
-    border: none !important;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10) !important;
-}
 .currency-card:hover {
     box-shadow: 0 6px 24px rgba(0,0,0,0.13);
 }
+
 .currency-card .card-body {
     padding: 1rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .currency-card .card-title {
     font-size: 1.08rem;
     font-weight: 600;
     color: #222;
     margin-bottom: 0;
 }
+
 .currency-card .text-right {
     text-align: right;
 }
+
 .currency-card .font-weight-bold.text-success {
     color: #4bb543 !important;
 }
+
 .currency-card .font-weight-bold.text-danger {
     color: #d7263d !important;
 }
 
-/* Tamno sivi top navbar, nije zift crn */
-.navbar-top {
-    background-color: #23272b !important; /* Bootstrap bg-dark, ali nijansa svetlija od crne */
-    color: #fff !important;
-    border-bottom: none !important;
-    font-size: 1rem;
+/* Transfer cards */
+.card-transfers {
+    width: 180px;
+    height: 180px;
+    border-radius: 1rem;
+    border: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-:root {
-  --gold: #d4af37;
-  --gold-dark: #b8962e;
-  --gold-light: #fff8e1;
-  --bg-dark: #111;
-  --text-light: #f5f5f5;
-  --separator: #333;
+.card-transfers .card-title {
+    font-size: 1.3rem;
+    height: 2.6rem;
+    line-height: 1.3rem;
 }
 
-.footer {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  padding: 80px 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.card-transfers img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain;
+    margin: 0 auto 6px auto !important;
+    padding: 6px !important;
+    display: block;
+    background: none;
+    transition: all 0.3s ease;
 }
 
-.footer h5, .footer h6 {
-  color: var(--gold);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.footer a {
-  color: var(--text-light);
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer .socials a {
-  color: var(--gold);
-  font-size: 1.2rem;
-}
-
-.footer .btn {
-  background-color: var(--gold);
-  color: var(--bg-dark);
-  font-weight: 700;
-}
-
-.footer .separator {
-  border-color: var(--separator);
-  margin: 50px 0;
-}
-
-/* Ikonice u kontakt sekciji */
-.footer .contact i {
-  color: var(--gold);  /* Zlatna boja */
-  margin-right: 0.5rem;
-}
-
-.hero-circle-wrap {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.no-shadow {
-  box-shadow: none !important;
-}
-.hero-img {
-  position: relative;
-  z-index: 3;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Zlatni prsten sa gradientom */
-.gold-ring {
-  position: absolute;
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  z-index: 1;
-  animation: spin 8s linear infinite;
-  background: conic-gradient(
-    from 0deg,
-    #e3b448 0deg 40deg,
-    transparent 40deg 180deg,
-    #f7e7a0 180deg 220deg,
-    transparent 220deg 360deg
-  );
-  -webkit-mask: radial-gradient(farthest-side, transparent 65%, black 66%);
-  mask: radial-gradient(farthest-side, transparent 65%, black 66%);
-  opacity: 0.95;
-}
-
-/* Drugi prsten, veći i sporiji */
-.gold-ring.ring2 {
-  width: 460px;
-  height: 460px;
-  animation: spin 14s linear infinite reverse;
-  background: conic-gradient(
-    from 90deg,
-    #f7e7a0 0deg 20deg,
-    transparent 20deg 200deg,
-    #e3b448 200deg 240deg,
-    transparent 240deg 360deg
-  );
-  -webkit-mask: radial-gradient(farthest-side, transparent 80%, black 81%);
-  mask: radial-gradient(farthest-side, transparent 80%, black 81%);
-  opacity: 0.7;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-
-
-@media (max-width: 767.98px) {
-  .kurir-section,
-  .loto-section {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: -24px;
-  }
-
-  .kurir-section::before,
-  .loto-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('img/kurir.png'); /* ili 'img/loto.png' za loto-section */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.3; /* 👈 ovde podešavaš prozirnost slike */
-    z-index: 1;;
-  }
-
-  .loto-section::before {
-    background-image: url('img/loto.png');
-  }
-
-  /* Tekst iznad slike */
-  .kurir-section > .row,
-  .loto-section > .row {
-    position: relative;
+.card-transfers:hover {
+    transform: scale(1.02);
     z-index: 2;
-  }
-
-  .kurir-section .main-img,
-  .loto-section .main-img {
-    display: none;
-  }
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.18) !important;
 }
 
+.card-body {
+    padding: 0.3rem !important;
+}
+
+/* Transfer section background */
+.transfer-section {
+    background: 
+        url("img/patern.jpg") repeat,
+        linear-gradient(300deg, #e3b448 0%, #f7f6f2 100%);
+    background-blend-mode: soft-light;
+    background-size: auto, cover;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* ===== FLIP CARDS ===== */
+.zastoSekcija {
+    padding-top: 40px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e3b448;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.flip-front {
+    z-index: 2;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+.flip-icon {
+    font-size: 3rem;
+    color: #e3b448;
+    margin-bottom: 15px;
+}
+
+.flip-front h3 {
+    font-size: 1.4rem;
+    color: #e3b448;
+}
+
+.flip-back p {
+    font-size: 1rem;
+    color: #ddd;
+    text-align: center;
+}
+
+/* ===== GOLD LUXURY BANNER ===== */
 .gold-luxury-banner {
     background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
-
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -646,11 +587,6 @@ body {
     z-index: 1;
 }
 
-.gold-text {
-    color: #e3b448;
-    letter-spacing: 1px;
-}
-
 .gold-luxury-banner .btn-outline-warning {
     border-width: 2px;
     transition: all 0.3s ease;
@@ -663,203 +599,208 @@ body {
     transform: scale(1.05);
 }
 
-@media (max-width: 767.98px) {
-    /* Sakrij prvi stupac (Valuta) u thead i tbody */
+/* ===== BUTTONS ===== */
+.btn-gold {
+    border: 2px solid #e3b448;
+    color: #e3b448;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #e3b448;
+    color: #000;
+}
+
+.pulse-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease;
+}
+
+.pulse-button:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px) scale(0.85);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.white-bg-section {
+    background: #fff;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    min-height: 1px;
+}
+
+.red-section {
+    background: linear-gradient(140deg, #ff0000 0%, #f7f6f2 100%);
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    z-index: 1;
+}
+
+.text-gold {
+    color: #e3b448;
+}
+
+.gold-text {
+    color: #e3b448;
+    letter-spacing: 1px;
+}
+
+.zastoKarica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 80px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer h5, .footer h6 {
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .socials a {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.footer .btn {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    font-weight: 700;
+}
+
+.footer .separator {
+    border-color: var(--separator);
+    margin: 50px 0;
+}
+
+.footer .contact i {
+    color: var(--gold);
+    margin-right: 0.5rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+
+    .flip-card {
+        margin-top: 0 !important;
+        margin-bottom: 20px;
+        width: 100% !important;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     table thead th:first-child,
     table tbody td:first-child {
         display: none;
     }
-}
 
-.zastoKarica {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  padding: 20px;
-}
-
-.zastoSekcija {
-  padding-top: 40px;
-}
-
-
-
-
-.text-gold {
-  color: #e3b448;
-}
-
-/* Flip kartica wrapper */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
-
-/* Unutrašnjost koja se rotira */
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s;
-  transform-style: preserve-3d;
-}
-
-/* Okretanje na hover */
-.flip-card:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-
-/* Lica kartice */
-.flip-front, .flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #e3b448;
-  border-radius: 12px;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  background-color: #111;
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
-
-/* Prednja strana */
-.flip-front {
-  z-index: 2;
-}
-
-/* Zadnja strana */
-.flip-back {
-  transform: rotateY(180deg);
-}
-
-/* Ikonice */
-.flip-icon {
-  font-size: 3rem;
-  color: #e3b448;
-  margin-bottom: 15px;
-}
-
-.flip-front h3 {
-  font-size: 1.4rem;
-  color: #e3b448;
-}
-
-.flip-back p {
-  font-size: 1rem;
-  color: #ddd;
-  text-align: center;
-}
-.flip-card {
-  position: relative;
-  z-index: 10; /* izdignuta iznad ostalih */
-  margin-top: -100px; /* pomera karticu naviše van sekcije */
-}
-@media (max-width: 768px) {
-  .flip-card {
-    margin-top: 0 !important;      /* poništi izlazak iz sekcije */
-    margin-bottom: 20px;           /* razmak između kartica */
-    width: 100% !important;        /* full width na mobilnom */
-    max-width: 320px;              /* ali ne previše široko */
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(40, 167, 69, 1);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
-  }
-}
-
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(40, 167, 69, 1);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
-  }
-}
-
-.pulse-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #28a745;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  text-decoration: none;
-  animation: pulse 2s infinite;
-  transition: background-color 0.3s ease;
-}
-
-.pulse-button:hover {
-  background-color: #218838;
-  text-decoration: none; /* isključuje podvlačenje */
-}
-
-
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px) scale(0.85);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
-}
-
-.animate-on-scroll.visible {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
-}
-
-
-    .btn-gold {
-        border: 2px solid #e3b448;
-        color: #e3b448;
-        background-color: transparent;
-        transition: all 0.3s ease;
+    .kurir-section,
+    .loto-section {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: -24px;
     }
 
-    .btn-gold:hover {
-        background-color: #e3b448;
-        color: #000; /* crni tekst na zlatnoj pozadini */
+    .kurir-section::before,
+    .loto-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('img/kurir.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.3;
+        z-index: 1;
     }
 
-.transfer-section {
-    background: 
-        url("img/patern.jpg") repeat,
-        linear-gradient(300deg, #e3b448 0%, #f7f6f2 100%);
-    background-blend-mode: soft-light; /* probaj i overlay/multiply */
-    background-size: auto, cover;
+    .loto-section::before {
+        background-image: url('img/loto.png');
+    }
+
+    .kurir-section > .row,
+    .loto-section > .row {
+        position: relative;
+        z-index: 2;
+    }
+
+    .kurir-section .main-img,
+    .loto-section .main-img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-transfers {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .card-transfers .card-img-top {
+        max-width: 90px;
+        max-height: 90px;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-transfers .card-title {
+        font-size: 1.3rem;
+        height: 2.6rem;
+        line-height: 1.3rem;
+    }
 }
 
