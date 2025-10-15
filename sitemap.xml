@@ -38,4 +38,47 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Transfer Pages -->
+    <url>
+        <loc>https://menjacnicathebest.com/western-union</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://menjacnicathebest.com/ria-money-transfer</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://menjacnicathebest.com/moneygram</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://menjacnicathebest.com/korona-pay</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://menjacnicathebest.com/kwikpay</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://menjacnicathebest.com/alta-brzi-kes</loc>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
 </urlset>
