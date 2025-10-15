@@ -16,7 +16,7 @@ Allow: /translations.js
 # Disallow: /test-multilingual.html
 
 # Sitemap location
-Sitemap: https://www.menjacnicathebest.rs/sitemap.xml
+Sitemap: https://menjacnicathebest.com/sitemap.xml
 
 # Allow social media crawlers
 User-agent: facebookexternalhit
