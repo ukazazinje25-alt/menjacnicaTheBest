@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # High-priority pages
-Allow: /index.html
+Allow: /
 Allow: /sitemap.xml
 
 # Allow important directories
