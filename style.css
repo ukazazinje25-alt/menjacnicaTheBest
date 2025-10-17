@@ -858,3 +858,40 @@ main {
     }
 }
 
+/* ===== CURRENCY NOTE STYLES ===== */
+.currency-important-note {
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    color: #d63384 !important;
+    background: linear-gradient(45deg, #fff3cd, #f8d7da);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #f5c6cb;
+    display: block;
+    box-shadow: 0 2px 8px rgba(214, 51, 132, 0.15);
+    margin-top: 0px;
+    margin-bottom: 8px;
+    width: 100%;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(214, 51, 132, 0.15);
+    }
+    50% { 
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(214, 51, 132, 0.25);
+    }
+}
+
+@media (max-width: 768px) {
+    .currency-important-note {
+        font-size: 0.85rem !important;
+        padding: 6px 10px;
+        line-height: 1.4;
+    }
+}
+

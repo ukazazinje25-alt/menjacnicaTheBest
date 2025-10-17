@@ -42,7 +42,7 @@ const translations = {
         'currency-table-code': 'Oznaka',
         'currency-table-buy': 'Otkup',
         'currency-table-sell': 'Prodaja',
-        'currency-note': '*Kursevi su informativni i važe za iznose preko €5000',
+        'currency-note': 'VAŽNO: Kursevi važe za iznose preko €5000.<br>Sve transakcije zahtevaju prethodno zakazivanje',
         
         // Currency Names
         'currency-eur': 'Evro',
@@ -435,7 +435,7 @@ const translations = {
         'currency-table-code': 'Code',
         'currency-table-buy': 'Buy',
         'currency-table-sell': 'Sell',
-        'currency-note': '*Rates are informative and apply to amounts over €5000',
+        'currency-note': 'IMPORTANT: Rates apply to amounts over €5000.<br>All transactions require prior booking',
         
         // Currency Names
         'currency-eur': 'Euro',
@@ -832,7 +832,7 @@ const translations = {
         'currency-table-code': 'Код',
         'currency-table-buy': 'Покупка',
         'currency-table-sell': 'Продажа',
-        'currency-note': '*Курсы информативные и действуют для сумм свыше €5000',
+        'currency-note': 'ВАЖНО: Курсы действуют для сумм свыше €5000.<br>Все транзакции требуют предварительного бронирования',
         
         // Currency Names
         'currency-eur': 'Евро',
