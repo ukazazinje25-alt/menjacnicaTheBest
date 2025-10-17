@@ -876,6 +876,17 @@ main {
     text-align: center;
 }
 
+.currency-timestamp {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.currency-update-info {
+    margin-bottom: 15px;
+}
+
 @keyframes subtle-pulse {
     0%, 100% { 
         transform: scale(1);

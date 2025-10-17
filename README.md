@@ -27,6 +27,32 @@ Moderni, responzivni vebsajt za menjačnicu "The Best" sa dve lokacije u Beograd
 - **Mape:** Google Maps API
 - **Animacije:** CSS3 transitions + custom JavaScript
 
+## ⏰ Automatsko Ažuriranje Kurseva
+Sistem automatski ažurira kurseve **jednom dnevno u 9:30 ujutru** koristeći:
+- **API:** kursna-lista.info (kursevi se ne menjaju tokom dana)
+- **Scheduling:** Node.js cron job - izvršava se tačno u 9:30
+- **Formatiranje:** XXX.X0 format za sve kurseve
+- **Timestamp:** Prikazuje "danas u 9:30" ili "juče u 9:30"
+- **Browser:** NE poziva API - koristi postojeće kurseve
+
+### 🚀 Pokretanje
+```bash
+# Instalacija zavisnosti
+npm install
+
+# Pokretanje automatskog ažuriranja
+node cron-scheduler.js
+
+# Ili koristi Windows batch fajl
+start-rate-updater.bat
+```
+
+### 🔧 Konfiguracija Spreadova
+**Gde da menjaš spreadove**: Otvori `spread-config.js`
+- Negativni procenat (buy) = niži kurs od srednjeg za otkup
+- Pozitivni procenat (sell) = viši kurs od srednjeg za prodaju
+- Primer: `'EUR': { buy: -0.3, sell: 0.3 }` = ±0.3% od srednjeg kursa
+
 
 ## 📞 Kontakt
 - **📧 Email:** menjacnicathebest@gmail.com

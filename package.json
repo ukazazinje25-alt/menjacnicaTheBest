@@ -1,0 +1,25 @@
+{
+  "name": "menjacnica-the-best-rate-updater",
+  "version": "1.0.0",
+  "description": "Automatski sistem za ažuriranje kurseva valuta sa kursna-lista.info API",
+  "main": "update-rates.js",
+  "scripts": {
+    "start": "node cron-scheduler.js",
+    "update-rates": "node update-rates.js",
+    "calculate-spreads": "node calculate-spreads.js",
+    "smart-update": "node smart-update-rates.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "node-cron": "^3.0.2"
+  },
+  "keywords": [
+    "exchange-rates",
+    "currency",
+    "api",
+    "automation",
+    "menjacnica"
+  ],
+  "author": "Menjačnica The Best",
+  "license": "MIT"
+}

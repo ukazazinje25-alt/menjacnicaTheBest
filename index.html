@@ -598,36 +598,39 @@
                                                         <th style="border-top-right-radius:18px; font-size:1.1rem;" data-lang="currency-table-sell">Prodaja</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="currency-table-body">
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇪🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-eur">Evro</span></td><td class="text-center" style="color:#222; font-weight:600;">EUR</td><td style="color:#222;">117.00</td><td style="color:#222;">117.50</td>
+                                                        <td><span>🇪🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-eur">Evro</span></td><td class="text-center" style="color:#222; font-weight:600;">EUR</td><td style="color:#222;" id="eur-buy">117.00</td><td style="color:#222;" id="eur-sell">117.50</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇺🇸</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-usd">Američki dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">USD</td><td style="color:#222;">99.00</td><td style="color:#222;">100.50</td>
+                                                        <td><span>🇺🇸</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-usd">Američki dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">USD</td><td style="color:#222;" id="usd-buy">99.00</td><td style="color:#222;" id="usd-sell">100.50</td>
                                                     </tr >
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇨🇭</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-chf">Švajcarski franak</span></td><td class="text-center" style="color:#222; font-weight:600;">CHF</td><td style="color:#222;">125.00</td><td style="color:#222;">127.00</td>
+                                                        <td><span>🇨🇭</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-chf">Švajcarski franak</span></td><td class="text-center" style="color:#222; font-weight:600;">CHF</td><td style="color:#222;" id="chf-buy">125.00</td><td style="color:#222;" id="chf-sell">127.00</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇬🇧</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-gbp">Britanska funta</span></td><td class="text-center" style="color:#222; font-weight:600;">GBP</td><td style="color:#222;">133.00</td><td style="color:#222;">135.00</td>
+                                                        <td><span>🇬🇧</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-gbp">Britanska funta</span></td><td class="text-center" style="color:#222; font-weight:600;">GBP</td><td style="color:#222;" id="gbp-buy">133.00</td><td style="color:#222;" id="gbp-sell">135.00</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span >🇦🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-aud">Australijski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">AUD</td><td style="color:#222;">63.50</td><td style="color:#222;">65.50</td>
+                                                        <td><span >🇦🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-aud">Australijski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">AUD</td><td style="color:#222;" id="aud-buy">63.50</td><td style="color:#222;" id="aud-sell">65.50</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span">🇨🇦</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-cad">Kanadski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">CAD</td><td style="color:#222;">70.00</td><td style="color:#222;">72.00</td>
+                                                        <td><span">🇨🇦</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-cad">Kanadski dolar</span></td><td class="text-center" style="color:#222; font-weight:600;">CAD</td><td style="color:#222;" id="cad-buy">70.00</td><td style="color:#222;" id="cad-sell">72.00</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇧🇦</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-bam">Bosanska marka</span></td><td class="text-center" style="color:#222; font-weight:600;">BAM</td><td style="color:#222;">59.50</td><td style="color:#222;">60.50</td>
+                                                        <td><span>🇧🇦</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-bam">Bosanska marka</span></td><td class="text-center" style="color:#222; font-weight:600;">BAM</td><td style="color:#222;" id="bam-buy">59.50</td><td style="color:#222;" id="bam-sell">60.50</td>
                                                     </tr>
                                                     <tr style="transition:background 0.2s;" class="text-left">
-                                                        <td><span>🇷🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-rub">Ruska rublja</span></td><td class="text-center" style="color:#222; font-weight:600;">RUB</td><td style="color:#222;">1.05</td><td style="color:#222;">1.20</td>
+                                                        <td><span>🇷🇺</span> <span class="ml-2 font-weight-bold" style="color:#222;" data-lang="currency-rub">Ruska rublja</span></td><td class="text-center" style="color:#222; font-weight:600;">RUB</td><td style="color:#222;" id="rub-buy">1.05</td><td style="color:#222;" id="rub-sell">1.20</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="text-center">
-                                            <span data-lang="currency-note" class="currency-important-note">*Kursevi su informativnog karaktera i važe za transakcije iznad €5000, uz obaveznu prethodnu najavu</span>
+                                            <div class="currency-update-info">
+                                                <span data-lang="currency-note" class="currency-important-note">*Kursevi su informativnog karaktera i važe za transakcije iznad €5000, uz obaveznu prethodnu najavu</span>
+                                                <div class="currency-timestamp" id="currencyTimestamp">Poslednje ažuriranje: --</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1049,6 +1052,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- Multilingual support -->
+        <script src="spread-config.js"></script>
         <script src="translations.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -1107,16 +1111,103 @@
 
 
 
-                const kursevi = {
-            EUR: { otkup: 117.00, prodaja: 117.50 },
-            USD: { otkup: 99.00, prodaja: 100.50 },
-            CHF: { otkup: 125.00, prodaja: 127.00 },
-            GBP: { otkup: 133.00, prodaja: 135.00 },
-            AUD: { otkup: 63.50, prodaja: 65.50 },
-            CAD: { otkup: 70.00, prodaja: 72.00 },
-            BAM: { otkup: 59.50,   prodaja: 60.50 },
-            RUB: { otkup: 1.05,   prodaja: 1.20 }
-            };
+                // ===== SISTEM ZA KURSEVE =====
+                // Kursevi se ažuriraju automatski svaki dan u 9:30 ujutru kroz Node.js skript
+                // Browser samo prikazuje postojeće kurseve, ne poziva API
+                // Konfiguracija spreadova se učitava iz spread-config.js
+                const spreadConfig = window.SPREAD_CONFIG;
+
+                // Funkcija za učitavanje kurseva iz HTML tabele (ažurirane od Node.js)
+                function loadCurrencyRatesFromHTML() {
+                    const rates = {};
+                    const currencies = ['EUR', 'USD', 'CHF', 'GBP', 'AUD', 'CAD', 'BAM', 'RUB'];
+                    
+                    currencies.forEach(currency => {
+                        const buyEl = document.getElementById(`${currency.toLowerCase()}-buy`);
+                        const sellEl = document.getElementById(`${currency.toLowerCase()}-sell`);
+                        
+                        if (buyEl && sellEl) {
+                            const buyRate = parseFloat(buyEl.textContent) || 0;
+                            const sellRate = parseFloat(sellEl.textContent) || 0;
+                            
+                            rates[currency] = {
+                                otkup: buyRate,
+                                prodaja: sellRate
+                            };
+                        }
+                    });
+                    
+                    return rates;
+                }
+
+                // Globalni objekat za čuvanje kurseva - učitava se iz HTML tabele
+                let kursevi = loadCurrencyRatesFromHTML();
+
+                // Kursevi se ažuriraju samo kroz Node.js skript u 9:30
+                // Browser ne poziva API jer se kursevi ne menjaju tokom dana
+
+                // Funkcija za ažuriranje tabele
+                function updateCurrencyTable() {
+                    // Ažuriraj vrednosti u tabeli
+                    Object.keys(kursevi).forEach(currency => {
+                        const buyEl = document.getElementById(`${currency.toLowerCase()}-buy`);
+                        const sellEl = document.getElementById(`${currency.toLowerCase()}-sell`);
+                        
+                        if (buyEl && sellEl) {
+                            buyEl.textContent = kursevi[currency].otkup.toFixed(2);
+                            sellEl.textContent = kursevi[currency].prodaja.toFixed(2);
+                        }
+                    });
+                }
+
+
+
+                // Kursevi se ažuriraju samo automatski u 9:30 ujutru
+                // Ne dohvatamo API iz browsera jer se kursevi ne menjaju tokom dana
+                document.addEventListener('DOMContentLoaded', function() {
+                    console.log('Kursevi se ažuriraju automatski svaki dan u 9:30 ujutru.');
+                    
+                    // Učitaj kurseve iz HTML tabele (ažurirane od Node.js)
+                    kursevi = loadCurrencyRatesFromHTML();
+                    console.log('Učitani kursevi iz HTML tabele:', kursevi);
+                    
+                    displayLastUpdateTime(); // Prikaži vreme poslednjeg ažuriranja
+                });
+
+                // Funkcija za prikazivanje vremena poslednjeg ažuriranja
+                function displayLastUpdateTime() {
+                    const timestampElement = document.getElementById('currencyTimestamp');
+                    if (timestampElement) {
+                        // Pokušaj da pročita postojeći timestamp iz HTML-a
+                        const currentText = timestampElement.textContent;
+                        if (currentText === 'Poslednje ažuriranje: --') {
+                            // Ako nema timestamp, prikaži tačan datum i vreme
+                            const today = new Date();
+                            const todayAt930 = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 30);
+                            
+                            const options = {
+                                year: 'numeric',
+                                month: '2-digit', 
+                                day: '2-digit',
+                                hour: '2-digit',
+                                minute: '2-digit',
+                                timeZone: 'Europe/Belgrade'
+                            };
+                            
+                            if (today >= todayAt930) {
+                                const todaysUpdate = todayAt930.toLocaleString('sr-RS', options);
+                                timestampElement.textContent = `Poslednje ažuriranje: ${todaysUpdate}`;
+                            } else {
+                                const yesterday = new Date(today);
+                                yesterday.setDate(yesterday.getDate() - 1);
+                                const yesterdayAt930 = new Date(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate(), 9, 30);
+                                const yesterdaysUpdate = yesterdayAt930.toLocaleString('sr-RS', options);
+                                timestampElement.textContent = `Poslednje ažuriranje: ${yesterdaysUpdate}`;
+                            }
+                        }
+                        // Ako već postoji timestamp (ažuriran od Node.js skripta), ostavi ga
+                    }
+                }
 
             function preracunaj() {
             const iznos = parseFloat(document.getElementById('amount').value);
