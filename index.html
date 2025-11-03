@@ -451,15 +451,20 @@
 
     <h3 id="currency-calculator" class="sr-only">Kalkulator za razmenu valuta</h3>
 
-  <form id="currencyCalc" class="needs-validation" novalidate>
   <div class="form-row mb-3">
     <div class="col-md-6">
       <label for="name" class="font-weight-bold" data-lang="form-name">Ime:</label>
       <input type="text" name="ime" class="form-control" id="name" placeholder="Vaše ime" required>
+      <div class="invalid-feedback">
+        Molimo unesite vaše ime.
+      </div>
     </div>
     <div class="col-md-6">
       <label for="contact" class="font-weight-bold" data-lang="form-contact">Broj telefona ili email:</label>
       <input type="text" name="kontakt" class="form-control" id="contact" placeholder="Telefon ili email" required>
+      <div class="invalid-feedback">
+        Molimo unesite broj telefona ili email.
+      </div>
     </div>
   </div>
 
@@ -479,11 +484,14 @@
           <option value="RSD">RSD</option>
         </select>
         <input type="number" name="iznos" class="form-control" id="amount" placeholder="Unesite iznos" min="0" step="any" required>
+        <div class="invalid-feedback">
+          Molimo unesite iznos.
+        </div>
       </div>
 
       <div class="input-group">
         <input type="text" name="iznos_preračunat" class="form-control" id="calcOutput" placeholder="Dobijeni iznos" readonly>
-        <select name="valuta_u" class="btn btn-outline-warning dropdown-toggle" id="toCurrencyOutput"
+        <select name="valuta_u" class="btn btn-outline-warning dropdown-toggle" id="toCurrencyOutput" required
                 style="max-width:140px; color:#fff; background-color:#e3b448; border-color:#e3b448;">
           <option value="RSD">RSD</option>
           <option value="EUR">EUR</option>
@@ -504,6 +512,9 @@
         <label class="form-check-label" for="agreeTerms" data-lang="form-terms">
           Slažem se sa <a href="#uslovi" target="_blank">uslovima korišćenja</a>
         </label>
+        <div class="invalid-feedback">
+          Morate se složiti sa uslovima korišćenja.
+        </div>
       </div>
     </div>
   </div>
@@ -1244,6 +1255,23 @@
             document.getElementById('amount').addEventListener('input', preracunaj);
             document.getElementById('fromCurrency').addEventListener('change', preracunaj);
             document.getElementById('toCurrencyOutput').addEventListener('change', preracunaj);
+
+            // Bootstrap form validation
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    var forms = document.getElementsByClassName('needs-validation');
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
 
             // Dodaj klik funkcionalnost na kartice transfera
             document.addEventListener('DOMContentLoaded', function() {
