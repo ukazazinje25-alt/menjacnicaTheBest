@@ -5,8 +5,14 @@ const translations = {
         'page-title': 'Menjačnica The Best',
         
         // Navigation
+        'nav-home': 'Početna',
         'nav-currency-list': 'Kursna Lista',
         'nav-money-transfers': 'Transferi Novca',
+        'nav-services': 'Ostale usluge',
+        'nav-lottery': 'Državna Lutrija Srbije',
+        'nav-roadside': 'AMSS Pomoć na putu',
+        'nav-courier': 'Uplatno mesto za kurire',
+        'nav-deposit': 'Uplata depozita za kladionice',
         'nav-investment-gold': 'Investiciono zlato',
         'nav-locations': 'Lokacije',
         'nav-call-center': 'Call Centar:',
@@ -402,8 +408,14 @@ const translations = {
         'page-title': 'Exchange Office The Best',
         
         // Navigation
+        'nav-home': 'Home',
         'nav-currency-list': 'Exchange Rates',
         'nav-money-transfers': 'Money Transfers',
+        'nav-services': 'Other Services',
+        'nav-lottery': 'Serbian State Lottery',
+        'nav-roadside': 'AMSS Roadside Assistance',
+        'nav-courier': 'Courier Payment Center',
+        'nav-deposit': 'Betting Deposit Payment',
         'nav-investment-gold': 'Investment Gold',
         'nav-locations': 'Locations',
         'nav-call-center': 'Call Center:',
@@ -803,8 +815,14 @@ const translations = {
         'page-title': 'Обменный пункт The Best',
         
         // Navigation
+        'nav-home': 'Главная',
         'nav-currency-list': 'Курсы валют',
         'nav-money-transfers': 'Денежные переводы',
+        'nav-services': 'Другие услуги',
+        'nav-lottery': 'Государственная лотерея Сербии',
+        'nav-roadside': 'Помощь на дороге AMSS',
+        'nav-courier': 'Центр оплаты курьеров',
+        'nav-deposit': 'Пополнение депозита для букмекеров',
         'nav-investment-gold': 'Инвестиционное золото',
         'nav-locations': 'Локации',
         'nav-call-center': 'Колл-центр:',

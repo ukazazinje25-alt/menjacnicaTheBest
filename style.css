@@ -32,6 +32,11 @@ main {
     padding-top: 80px; /* Adjust based on header height */
 }
 
+/* Scroll margin za sekcije da se vidi ceo naslov */
+#loto, #kuriri, #amss, #depozit, #kursnaLista, #lokacije {
+    scroll-margin-top: 120px;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
