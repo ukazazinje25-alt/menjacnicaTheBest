@@ -215,10 +215,10 @@
                         <li class="nav-item"><a class="nav-link" href="/" data-lang="nav-home">Početna</a></li>
                         <li class="nav-item"><a class="nav-link" href="/#kursnaLista" data-lang="nav-currency-list">Kursna Lista</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="transferiNovcaDropdown" role="button" data-toggle="dropdown" data-lang="nav-money-transfers">
+                            <a class="nav-link dropdown-toggle active" href="#" id="transferiNovcaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="nav-money-transfers">
                                 Transferi Novca
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu" aria-labelledby="transferiNovcaDropdown">
                                 <a class="dropdown-item" href="western-union">WesternUnion</a>
                                 <a class="dropdown-item" href="ria-money-transfer">Ria Money Transfer</a>
                                 <a class="dropdown-item" href="korona-pay">Korona Pay</a>
@@ -227,7 +227,20 @@
                                 <a class="dropdown-item" href="alta-brzi-kes">Alta Brzi Kes</a>
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="uslugeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="nav-services">
+                                Ostale usluge
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="uslugeDropdown">
+                                <a class="dropdown-item" href="/#loto" data-lang="nav-lottery">Državna Lutrija Srbije</a>
+                                <a class="dropdown-item" href="/#amss" data-lang="nav-roadside">AMSS Pomoć na putu</a>
+                                <a class="dropdown-item" href="/#kuriri" data-lang="nav-courier">Uplatno mesto za kurire</a>
+                                <a class="dropdown-item" href="/#depozit" data-lang="nav-deposit">Uplata depozita za kladionice</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="/#lokacije" data-lang="nav-locations">Lokacije</a></li>
+                    </ul>
+                </div>
                     </ul>
                 </div>
             </div>
