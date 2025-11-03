@@ -836,7 +836,7 @@ main {
     .amc-section::before {
         background-image: url('img/amc_logo1.svg');
         background-size: contain;
-        background-position: center top;
+        background-position: center center;
     }
 
     .kurir-section > .row,
