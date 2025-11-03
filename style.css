@@ -803,14 +803,16 @@ main {
     }
 
     .kurir-section,
-    .loto-section {
+    .loto-section,
+    .amc-section {
         position: relative;
         overflow: hidden;
         margin-bottom: -24px;
     }
 
     .kurir-section::before,
-    .loto-section::before {
+    .loto-section::before,
+    .amc-section::before {
         content: '';
         position: absolute;
         inset: 0;
@@ -826,14 +828,22 @@ main {
         background-image: url('img/loto.png');
     }
 
+    .amc-section::before {
+        background-image: url('img/amc_logo1.svg');
+        background-size: contain;
+        background-position: center top;
+    }
+
     .kurir-section > .row,
-    .loto-section > .row {
+    .loto-section > .row,
+    .amc-section > .row {
         position: relative;
         z-index: 2;
     }
 
     .kurir-section .main-img,
-    .loto-section .main-img {
+    .loto-section .main-img,
+    .amc-section .main-img {
         display: none;
     }
 }

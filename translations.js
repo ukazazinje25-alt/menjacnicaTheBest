@@ -368,6 +368,10 @@ const translations = {
         'lottery-title': 'Državna lutrija Srbije',
         'lottery-description': 'Okušaj sreću i postani deo najpoznatijih igara na sreću u Srbiji! U našoj menjačnici možeš jednostavno da uplatiš',
         
+        // Roadside Assistance
+        'roadside-title': 'Produžavanje AMSS paketa pomoći na putu',
+        'roadside-description': 'U našoj menjačnici možete produžiti AMSS paket pomoći na putu!<br>Brzo, jednostavno i bez čekanja - produžite članstvo i osigurajte pomoć na celoj teritoriji Srbije i Evrope.',
+        
         // Betting Deposits
         'betting-title': 'Uplata BET depozita',
         'betting-description': 'U našoj menjačnici možete brzo i jednostavno izvršiti uplatu depozita za najpoznatije kladionice u Srbiji. Bez čekanja, bez komplikacija – samo dođite, uplatite i igrajte!',
@@ -757,6 +761,10 @@ const translations = {
         // State Lottery
         'lottery-title': 'Serbian State Lottery',
         'lottery-description': 'Try your luck and become part of Serbia\'s most famous games of chance! In our exchange office you can easily deposit',
+        
+        // Roadside Assistance
+        'roadside-title': 'AMSS Roadside Assistance Package Extension',
+        'roadside-description': 'At our exchange office you can extend your AMSS roadside assistance package!<br>Fast, simple and without waiting - extend your membership and secure assistance throughout Serbia and Europe.',
         
         // Betting Deposits
         'betting-title': 'BET Deposit Payment',
@@ -1157,6 +1165,10 @@ const translations = {
         // State Lottery
         'lottery-title': 'Государственная лотерея Сербии',
         'lottery-description': 'Попытайте удачу и станьте частью самых известных азартных игр Сербии! В нашем обменном пункте вы можете легко внести депозит',
+        
+        // Roadside Assistance
+        'roadside-title': 'Продление пакета дорожной помощи AMSS',
+        'roadside-description': 'В нашем обменном пункте вы можете продлить пакет дорожной помощи AMSS!<br>Быстро, просто и без ожидания - продлите членство и обеспечьте помощь на всей территории Сербии и Европы.',
         
         // Betting Deposits
         'betting-title': 'Пополнение депозита БЕТ',
