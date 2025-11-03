@@ -1,7 +1,7 @@
 {
   "name": "Menjačnica The Best - Najbolji kursevi valuta u Beogradu",
   "short_name": "Menjačnica The Best",
-  "description": "Najpovoljniji kursevi valuta, sigurni transferi novca i investiciono zlato. Dve lokacije u Beogradu.",
+  "description": "Najpovoljniji kursevi valuta, sigurni transferi novca, investiciono zlato, AMSS pomoć na putu, lutrija i uplate za kurire. Dve lokacije u Beogradu.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#e3b448",
@@ -63,6 +63,32 @@
         {
           "src": "img/favicon.svg",
           "sizes": "192x192", 
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "AMSS Pomoć na putu",
+      "short_name": "AMSS",
+      "description": "Produžavanje AMSS paketa",
+      "url": "/#amss",
+      "icons": [
+        {
+          "src": "img/favicon.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Državna lutrija",
+      "short_name": "Lutrija",
+      "description": "Lutrija i igre na sreću",
+      "url": "/#loto",
+      "icons": [
+        {
+          "src": "img/favicon.svg",
+          "sizes": "192x192",
           "type": "image/svg+xml"
         }
       ]

@@ -1,24 +1,31 @@
 User-agent: *
 Allow: /
 
-# High-priority pages
-Allow: /
-Allow: /sitemap.xml
-
-# Allow important directories
+# Allow important files and directories
 Allow: /img/
 Allow: /style.css
 Allow: /translations.js
+Allow: /manifest.json
 
-# Block admin or sensitive areas (if any)
+# Allow transfer pages
+Allow: /western-union
+Allow: /ria-money-transfer
+Allow: /moneygram
+Allow: /korona-pay
+Allow: /kwikpay
+Allow: /alta-brzi-kes
+
+# Block any sensitive areas (currently none)
 # Disallow: /admin/
 # Disallow: /private/
-# Disallow: /test-multilingual.html
+
+# Crawl delay for slower bots (optional)
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://menjacnicathebest.com/sitemap.xml
 
-# Allow social media crawlers
+# Social media and search engine crawlers
 User-agent: facebookexternalhit
 Allow: /
 
@@ -28,8 +35,8 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: GoogleBot
+User-agent: Googlebot
 Allow: /
 
-# Cache directive for better performance
-# Cache-control: public, max-age=86400
+User-agent: Bingbot
+Allow: /
