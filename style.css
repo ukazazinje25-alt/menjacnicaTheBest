@@ -1017,6 +1017,13 @@ main {
     border-radius: 6px;
 }
 
+/* Active dropdown item */
+.dropdown-item.active {
+    color: #e3b448 !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, rgba(227, 180, 72, 0.1) 0%, rgba(227, 180, 72, 0.05) 100%);
+}
+
 /* Currency page hero section */
 .currency-hero {
     background: linear-gradient(135deg, #fffbe6 0%, #f7f6f2 50%, #fff 100%);
