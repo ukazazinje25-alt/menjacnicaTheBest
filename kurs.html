@@ -266,11 +266,12 @@
                                                 </div>
                                             </td>
                                             
-                                            <!-- Tablet/mobilna verzija - kompaktna -->
-                                            <td class="d-lg-none" colspan="4" style="padding: 10px;">
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-2">
-                                                        <select id="calcFromCurrencyMobile" class="form-control" style="background-color:#e3b448; color:#fff; border-color:#e3b448; font-size:0.8em; padding:5px;">
+                                            <!-- Tablet/mobilna verzija - u dva reda -->
+                                            <td class="d-lg-none" colspan="4" style="padding: 15px;">
+                                                <!-- Prvi red - od valute i iznos -->
+                                                <div class="row align-items-center mb-2" style="margin: 0 -3px;">
+                                                    <div class="col-3" style="padding: 0 3px;">
+                                                        <select id="calcFromCurrencyMobile" class="form-control" style="background-color:#e3b448; color:#fff; border-color:#e3b448; font-size:1em; padding:10px; height:45px;">
                                                             <option value="EUR">EUR</option>
                                                             <option value="USD">USD</option>
                                                             <option value="CHF">CHF</option>
@@ -282,17 +283,17 @@
                                                             <option value="RSD">RSD</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-3 pl-1">
-                                                        <input type="number" id="calcAmountMobile" class="form-control" placeholder="Iznos" min="0" step="any" style="border-color:#e3b448; font-size:0.8em; padding:5px;">
+                                                    <div class="col-9" style="padding: 0 3px;">
+                                                        <input type="number" id="calcAmountMobile" class="form-control" placeholder="Unesite iznos za konverziju" min="0" step="any" style="border-color:#e3b448; font-size:1em; padding:10px; height:45px;">
                                                     </div>
-                                                    <div class="col-1 text-center">
-                                                        <i class="bi bi-arrow-right" style="color:#e3b448; font-size:1em;"></i>
+                                                </div>
+                                                <!-- Drugi red - rezultat i u valutu -->
+                                                <div class="row align-items-center" style="margin: 0 -3px;">
+                                                    <div class="col-9" style="padding: 0 3px;">
+                                                        <input type="text" id="calcResultMobile" class="form-control" placeholder="Rezultat konverzije" readonly style="background-color: #f8f9fa; font-weight: bold; color: #e3b448; font-size:1em; padding:10px; height:45px;">
                                                     </div>
-                                                    <div class="col-3">
-                                                        <input type="text" id="calcResultMobile" class="form-control" placeholder="Rezultat" readonly style="background-color: #f8f9fa; font-weight: bold; color: #e3b448; font-size:0.8em; padding:5px;">
-                                                    </div>
-                                                    <div class="col-3 pl-1">
-                                                        <select id="calcToCurrencyMobile" class="form-control" style="background-color:#e3b448; color:#fff; border-color:#e3b448; font-size:0.8em; padding:5px;">
+                                                    <div class="col-3" style="padding: 0 3px;">
+                                                        <select id="calcToCurrencyMobile" class="form-control" style="background-color:#e3b448; color:#fff; border-color:#e3b448; font-size:1em; padding:10px; height:45px;">
                                                             <option value="RSD">RSD</option>
                                                             <option value="EUR">EUR</option>
                                                             <option value="USD">USD</option>
@@ -689,5 +690,11 @@
         setInterval(updateTime, 30000);
 
     </script>
+
+    <!-- Call Button for Mobile -->
+    <a href="tel:+381611340888" class="pulse-button d-block d-md-none" style="position: fixed; bottom: 20px; right: 20px; background-color: green; color: white; border-radius: 50%; padding: 15px; z-index: 1000;">
+        <i class="fa fa-phone" style="font-size: 24px;"></i>
+    </a>
+
 </body>
 </html>
