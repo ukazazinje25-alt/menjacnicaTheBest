@@ -569,7 +569,8 @@
   <div class="container text-center">
     <h2 id="why-choose-us" class="sr-only">Zašto odabrati našu menjačnicu</h2>
 
-    <div class="row justify-content-center g-4">
+    <!-- Desktop verzija - sve kartice odjednom -->
+    <div class="row justify-content-center g-4 d-none d-md-flex">
       <!-- Kartica 1 -->
       <div class="col-12 col-md-6 col-lg-4 animate-on-scroll">
         <article class="flip-card">
@@ -615,6 +616,77 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobilna verzija - carousel -->
+    <div class="d-block d-md-none">
+      <div id="whyCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <article class="flip-card">
+                  <div class="flip-inner">
+                    <div class="flip-front">
+                      <i class="bi bi-currency-exchange flip-icon" aria-hidden="true"></i>
+                      <h3 data-lang="why-title-1">Otkup i Prodaja<br> Velikih Iznosa</h3>
+                    </div>
+                    <div class="flip-back">
+                      <p data-lang="why-desc-1">Bez obzira na iznos, uspešno završavamo svaku transakciju<br> brzo i pouzdano.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <article class="flip-card">
+                  <div class="flip-inner">
+                    <div class="flip-front">
+                      <i class="bi bi-send-check flip-icon" aria-hidden="true"></i>
+                      <h3 data-lang="why-title-2">Transferi Novca <br>bez Limita</h3>
+                    </div>
+                    <div class="flip-back">
+                      <p data-lang="why-desc-2">Naši transferi nemaju ograničenja mozete podici bilo koji iznos kod nas bez najave</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <article class="flip-card">
+                  <div class="flip-inner">
+                    <div class="flip-front">
+                      <i class="bi bi-person-badge flip-icon" aria-hidden="true"></i>
+                      <h3 data-lang="why-title-3">Uplata ne Tekući račun bez Limita</h3>
+                    </div>
+                    <div class="flip-back">
+                      <p data-lang="why-desc-3">Našim klijentima pružamo posebnu pažnju i ekskluzivan, diskretan pristup.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indikatori (tri tačke) -->
+        <ol class="carousel-indicators" style="bottom: -30px;">
+          <li data-target="#whyCarousel" data-slide-to="0" class="active" style="background-color: #e3b448;"></li>
+          <li data-target="#whyCarousel" data-slide-to="1" style="background-color: #e3b448;"></li>
+          <li data-target="#whyCarousel" data-slide-to="2" style="background-color: #e3b448;"></li>
+        </ol>
       </div>
     </div>
   </div>

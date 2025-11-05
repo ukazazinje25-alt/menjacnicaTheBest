@@ -504,6 +504,7 @@ main {
     position: relative;
     z-index: 10;
     margin-top: -100px;
+    box-shadow: none !important; /* Uklanja senku */
 }
 
 .flip-inner {
@@ -532,7 +533,7 @@ main {
     padding: 30px;
     background-color: #111;
     color: #fff;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    box-shadow: none; /* Uklanja senku */
 }
 
 .flip-front {
