@@ -960,11 +960,108 @@ main {
     }
 }
 
+/* ===== CURRENCY PAGE SPECIFIC STYLES ===== */
+.currency-row {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.currency-row:hover {
+    background-color: rgba(227, 180, 72, 0.1) !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(227, 180, 72, 0.2);
+}
+
+.kursna-lista-glass {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(227, 180, 72, 0.2);
+    transition: all 0.3s ease;
+}
+
+.kursna-lista-glass:hover {
+    box-shadow: 0 12px 40px 0 rgba(35, 35, 35, 0.25);
+    border: 1px solid rgba(227, 180, 72, 0.4);
+}
+
+/* Enhanced table styling for currency page */
+.table-responsive table {
+    border-spacing: 0;
+    border-collapse: separate;
+    overflow: hidden;
+}
+
+.table-responsive table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 18px;
+}
+
+.table-responsive table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 18px;
+}
+
+/* Currency calculator specific styles */
+#calcResult {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #e3b448;
+    color: #e3b448;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Active navigation item for currency page */
+.nav-item.active .nav-link {
+    color: #e3b448 !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, rgba(227, 180, 72, 0.1) 0%, rgba(227, 180, 72, 0.05) 100%);
+    border-radius: 6px;
+}
+
+/* Currency page hero section */
+.currency-hero {
+    background: linear-gradient(135deg, #fffbe6 0%, #f7f6f2 50%, #fff 100%);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.currency-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="50" opacity="0.1">💰</text></svg>');
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+}
+
 @media (max-width: 768px) {
     .currency-important-note {
         font-size: 0.85rem !important;
         padding: 6px 10px;
         line-height: 1.4;
+    }
+    
+    .currency-row {
+        transform: none !important;
+    }
+    
+    .currency-row:hover {
+        transform: none !important;
+        background-color: rgba(227, 180, 72, 0.05) !important;
+    }
+    
+    .table-responsive table {
+        font-size: 0.9rem;
+    }
+    
+    .currency-hero {
+        min-height: 30vh;
     }
 }
 
