@@ -29,7 +29,7 @@ body {
 }
 
 main {
-    padding-top: 80px; /* Adjust based on header height */
+    padding-top: 65px; /* Adjust based on header height */
 }
 
 /* Scroll margin za sekcije da se vidi ceo naslov */
