@@ -1,42 +1,132 @@
+# Menjačnica The Best - Comprehensive Robots.txt
+# Updated: 2025-01-10
+
+# Primary robots directive
 User-agent: *
 Allow: /
 
-# Allow important files and directories
+# Explicitly allow important directories and files
 Allow: /img/
 Allow: /style.css
 Allow: /translations.js
 Allow: /manifest.json
+Allow: /sitemap.xml
+Allow: /kurs.html
+Allow: /modal.html
 
-# Allow transfer pages
-Allow: /western-union
-Allow: /ria-money-transfer
-Allow: /moneygram
-Allow: /korona-pay
-Allow: /kwikpay
-Allow: /alta-brzi-kes
+# Allow all transfer service pages
+Allow: /western-union.html
+Allow: /ria-money-transfer.html
+Allow: /moneygram.html
+Allow: /korona-pay.html
+Allow: /kwikpay.html
+Allow: /alta-brzi-kes.html
 
-# Block any sensitive areas (currently none)
+# Block sensitive areas (if any in future)
 # Disallow: /admin/
 # Disallow: /private/
+# Disallow: /tmp/
 
-# Crawl delay for slower bots (optional)
+# Crawl delay for respectful crawling
 Crawl-delay: 1
 
-# Sitemap location
-Sitemap: https://menjacnicathebest.com/sitemap.xml
-
-# Social media and search engine crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
+# Search Engine Specific Instructions
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0.5
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: WhatsApp
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: TelegramBot
+Allow: /
+Crawl-delay: 1
+
+# AI and Chat Bot Crawlers
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+# News and Content Aggregators
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 5
+
+User-agent: Wayback
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 3
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: MozBot
+Allow: /
+Crawl-delay: 2
+
+# Sitemap locations
+Sitemap: https://menjacnicathebest.com/sitemap.xml
+
+# Host directive for preferred domain
+Host: menjacnicathebest.com
