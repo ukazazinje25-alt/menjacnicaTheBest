@@ -29,7 +29,7 @@ body {
 }
 
 main {
-    padding-top: 65px; /* Adjust based on header height */
+    padding-top: 40px; /* Adjust based on header height */
 }
 
 /* Scroll margin za sekcije da se vidi ceo naslov */
@@ -871,7 +871,7 @@ main {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     main {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 
     /* Minimalistički mobilni navbar */
