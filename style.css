@@ -545,14 +545,14 @@ main {
 }
 
 .row .col-12:nth-child(2) .flip-card .flip-front {
-    background-image: url('img/promena_novca4.JPG');
+    background-image: url('img/transferi_novca_Menjacnica_The_Best.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .row .col-12:nth-child(3) .flip-card .flip-front {
-    background-image: url('img/promena_novca2.JPG');
+    background-image: url('img/menjacnic_The_Best_Placanje_Racuna.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
